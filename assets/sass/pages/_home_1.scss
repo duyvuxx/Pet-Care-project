@@ -1,0 +1,525 @@
+#home_1 {
+  slider {
+    @include dflex;
+    position: relative;
+
+    .slider-infor {
+      margin-left: -40rem;
+
+      text-align: left;
+
+      h1 {
+        width: 45rem;
+
+        font-size: 8rem;
+        letter-spacing: -0.5rem;
+        line-height: 8rem;
+      }
+
+      p {
+        width: 45rem;
+        margin: 3rem auto;
+        font-size: 1.3rem;
+
+        line-height: 2rem;
+        color: gray;
+      }
+
+      button {
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+          transform: scale(1.07);
+        }
+      }
+    }
+
+    .slider-wrapper {
+      @include abs(-6.5rem, auto, 0);
+
+      width: 80rem;
+      z-index: -1;
+
+      img:nth-child(2) {
+        @include abs(-7rem, auto, 0);
+        z-index: -2;
+      }
+
+      img:nth-child(3) {
+        @include abs(25rem, auto, 56rem);
+
+        z-index: -1;
+      }
+
+      img:nth-child(4) {
+        @include abs(-25rem, auto, 0);
+
+        z-index: -3;
+      }
+
+      img:nth-child(5) {
+        @include abs(65rem, 65rem, 0);
+
+        z-index: -1;
+      }
+
+      img:nth-child(6) {
+        @include abs(48rem, -42rem, 0);
+      }
+    }
+
+    .slider-aside {
+      position: relative;
+      z-index: -1;
+      top: -11rem;
+      left: -83rem;
+    }
+  }
+
+  main {
+    .title {
+      > div {
+        margin-bottom: 1rem;
+        color: $orange-clr;
+      }
+
+      h2 {
+        font-size: 4rem;
+        letter-spacing: -0.2rem;
+      }
+    }
+
+    .quality {
+      &-infor {
+        margin: 10rem auto 3rem;
+        text-align: center;
+      }
+
+      &-list {
+        @include dflex;
+        position: relative;
+
+        &-items {
+          @include dflex;
+          flex-direction: column;
+          margin: 10rem auto;
+          padding: 16rem 4rem 2rem;
+          height: 42rem;
+
+          background-color: white;
+          border-radius: 10rem 10rem 2rem 2rem;
+          box-shadow: 0px 0px 4.8px rgba(0, 0, 0, 0.032),
+            0px 0px 12.1px rgba(0, 0, 0, 0.051),
+            0px 0px 24.6px rgba(0, 0, 0, 0.061),
+            0px 0px 50.7px rgba(0, 0, 0, 0.067),
+            0px 0px 139px rgba(0, 0, 0, 0.07);
+
+          transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+          position: relative;
+
+          .quality-img {
+            position: absolute;
+            top: -10rem;
+
+            img {
+              width: 100%;
+              height: 100%;
+
+              object-fit: cover;
+            }
+          }
+
+          .quality-sub {
+            @include dflex;
+
+            width: 8rem;
+            height: 8rem;
+            background-color: white;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+
+              object-fit: contain;
+              transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            }
+          }
+
+          .quality-text {
+            width: 20rem;
+
+            text-align: center;
+            user-select: none;
+
+            p:first-child {
+              font-size: 2rem;
+            }
+
+            p:last-child {
+              font-size: 1.3rem;
+            }
+          }
+
+          .quality-btn {
+            padding: 0.5rem 1.5rem;
+
+            font-size: 1.6rem !important;
+            position: absolute;
+            bottom: -1.5rem;
+
+            opacity: 0;
+
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+          }
+
+          .quality-layer {
+            @include abs(0.5rem, 0, 0);
+            z-index: -1;
+
+            background-color: $orange-clr;
+            height: 42rem;
+            border-radius: 10rem 10rem 2rem 2rem;
+
+            opacity: 0;
+
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+          }
+
+          &:hover {
+            background-color: #ecebeb;
+          }
+
+          &:hover .quality-sub {
+            background-color: $orange-clr;
+
+            img {
+              filter: brightness(0) invert(1);
+            }
+          }
+
+          &:hover .quality-btn,
+          &:hover .quality-layer {
+            cursor: pointer;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .statistic {
+      @include dflex;
+
+      &-items {
+        @include dflex;
+        flex: 1;
+        gap: 3rem;
+        margin: 3rem 0 15rem;
+
+        position: relative;
+
+        .statistic-wrapper {
+        }
+
+        .statistic-pawn {
+          position: absolute;
+          z-index: -1;
+        }
+
+        .statistic-infor {
+          p {
+            margin: 0;
+          }
+
+          p:first-child {
+            font-size: 5rem;
+          }
+
+          p:last-child {
+            color: gray;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+
+    .about {
+      @include dflex(start, center);
+      flex: 1;
+      gap: 5rem;
+
+      &-img {
+        position: relative;
+
+        width: 100%;
+
+        &-sub img,
+        &-wrapper img {
+          width: 100%;
+          height: 100%;
+
+          object-fit: cover;
+        }
+
+        &-sub {
+          position: absolute;
+          top: 0;
+          left: -21.3rem;
+        }
+
+        &-wrapper {
+          position: absolute;
+          top: 0;
+          left: -21.3rem;
+        }
+      }
+
+      &-infor {
+        width: 80rem;
+
+        &-top {
+          &-title {
+          }
+        }
+
+        &-text {
+          margin: 2rem auto;
+
+          font-size: 1.3rem;
+          color: gray;
+        }
+
+        &-mess {
+          > p {
+            width: 57rem;
+            height: 16rem;
+            line-height: 4rem;
+
+            text-align: left;
+            padding: 2rem;
+            font-size: 2rem;
+            background-repeat: no-repeat;
+          }
+        }
+
+        &-expert {
+          @include dflex(center, space-between);
+          gap: 4rem;
+          padding: 0;
+
+          &-items {
+            flex: 1;
+
+            i {
+              color: #3985b1;
+            }
+
+            span {
+              font-size: 2rem;
+            }
+
+            p {
+              margin: 1.5rem auto;
+              color: gray;
+              font-size: 1.3rem;
+            }
+          }
+        }
+
+        &-btn {
+          margin-top: 3rem;
+
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            transform: scaleY(1.07);
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+
+    .gallery {
+      margin-top: 23rem;
+      padding: 0;
+      position: relative;
+
+      &-list {
+        @include dflex;
+        gap: 3rem;
+        padding: 0;
+        overflow: hidden;
+
+        &-items {
+          position: relative;
+
+          &-wrapper {
+          }
+
+          &-layer {
+            @include dflex;
+
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+
+            background-color: $orange-clr;
+            border-radius: 1rem;
+
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+            > i {
+              font-size: 10rem;
+              color: white;
+            }
+
+            &:hover {
+              cursor: pointer;
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+
+      &-bg {
+        position: relative;
+
+        &-wrapper {
+          position: absolute;
+          top: -16rem;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 2;
+
+          width: 30%;
+
+          img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+          }
+
+          .off,
+          .left,
+          .right {
+            display: none;
+            position: absolute;
+            z-index: 2;
+          }
+
+          .off {
+            top: 0;
+            right: -10rem;
+
+            i {
+              font-size: 2.5rem;
+              font-weight: bold;
+            }
+          }
+
+          .left {
+            top: 50%;
+            left: -10rem;
+          }
+
+          .right {
+            top: 50%;
+            right: -10rem;
+          }
+        }
+      }
+
+      &-active {
+        background-color: #0000009a;
+        position: absolute;
+        z-index: 1;
+        top: -300%;
+        left: 0;
+        right: 0;
+        height: 700%;
+
+        display: none;
+
+        // .off {
+        //   position: relative;
+        //   z-index: 2;
+        //   top: 190rem;
+        //   left: 114rem;
+        // }
+      }
+
+      &-sub {
+        &-wrapper {
+          position: absolute;
+          top: 60%;
+          z-index: -1;
+        }
+
+        > h4 {
+          position: absolute;
+          top: 120%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          font-size: 2.5rem;
+        }
+
+        &-list {
+          @include dflex;
+          gap: 5rem;
+          position: absolute;
+          top: 150%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          padding: 0;
+
+          &-items {
+            .list-sub-wrapper {
+              width: 15rem;
+            }
+
+            .list-sub-wrapper img {
+              filter: grayscale(100%);
+              transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+              &:hover {
+                cursor: pointer;
+                filter: none;
+                transform: scale(1.07);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .talking {
+      margin-top: 45rem;
+    }
+
+    #outer {
+      width: 100%;
+
+      clip-path: path(
+        "M899.89,29V597.92c-1.47-.78-3-1.52-4.41-2.33-50.55-28.08-104.59-44.44-162.42-47.41-46.48-2.38-91.61,4.92-135.26,21a174.26,174.26,0,0,1-63.17,10.45c-35.34-.48-69.7-7.89-104-15.25-47.51-10.17-95-20.46-143.65-23.88-43.28-3.05-86.29-1.25-128.65,8.19-25.69,5.72-51.14,8.66-77.13,3.2-19-4-36.87-10.35-52-22.93-14.76-12.3-22.76-28-20.75-47.35,1-9.8,3.87-19.59,7.11-29,7.6-22,16.52-43.55,23.84-65.63,12.08-36.46,15.7-73.77,8.64-111.81-5.63-30.28-17.56-58.1-32.36-84.95-5.41-9.8-9.1-20.6-13-31.15C1,154.67.83,149.7,0,145V135a21,21,0,0,0,.88-3.33C2.72,111.57,11,94.19,23.57,78.78c21.6-26.55,49.94-43.13,82-53.71,53.39-17.64,107.29-17,160.76-1.29,58.52,17.16,117.5,31.77,178,39.73,52.34,6.88,104.78,9.92,157.38,3.41,29.9-3.71,58.64-11.36,85.63-25.39,14.87-7.74,30.35-14.43,45.93-20.67,28.4-11.37,57.63-19.58,88.57-20,28.89-.41,55,6.88,76.35,27.42A5.79,5.79,0,0,0,899.89,29Z"
+      );
+      overflow: hidden;
+      position: relative;
+
+      video {
+        width: 50%;
+        // height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        // object-fit: cover;
+      }
+    }
+  }
+
+  footer {
+  }
+}
