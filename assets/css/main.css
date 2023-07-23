@@ -11,7 +11,7 @@ body {
 
 @font-face {
   font-family: "Quicksand";
-  src: url("../../assets/fonts/QuicksandBold-Regular.woff2") format("woff2"), url("../../assets/fonts/QuicksandBold-Regular.woff") format("woff");
+  src: url("../fonts/QuicksandBold-Regular.woff2") format("woff2"), url("../fonts/QuicksandBold-Regular.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -246,7 +246,7 @@ button {
 #home_1 slider .slider-wrapper img:nth-child(6) {
   position: absolute;
   top: 48rem;
-  left: -42rem;
+  left: -50rem;
   right: 0;
 }
 #home_1 slider .slider-aside {
