@@ -11,7 +11,7 @@ body {
 
 @font-face {
   font-family: "Quicksand";
-  src: url("../../../assets/fonts/QuicksandBold-Regular.woff2") format("woff2"), url("../../../assets/fonts/QuicksandBold-Regular.woff") format("woff");
+  src: url("/assets/fonts/QuicksandBold-Regular.woff2") format("woff2"), url("/assets/fonts/QuicksandBold-Regular.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -458,12 +458,12 @@ button {
 #home_1 main .about-img-sub {
   position: absolute;
   top: 0;
-  left: -21.3rem;
+  left: -30.3rem;
 }
 #home_1 main .about-img-wrapper {
   position: absolute;
   top: 0;
-  left: -21.3rem;
+  left: -30.3rem;
 }
 #home_1 main .about-infor {
   width: 80rem;
@@ -481,6 +481,7 @@ button {
   padding: 2rem;
   font-size: 2rem;
   background-repeat: no-repeat;
+  background-image: url("/assets/imgs/main/main_message.png");
 }
 #home_1 main .about-infor-expert {
   display: -webkit-box;
