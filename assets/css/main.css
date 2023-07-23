@@ -11,7 +11,7 @@ body {
 
 @font-face {
   font-family: "Quicksand";
-  src: url("../fonts/QuicksandBold-Regular.woff2") format("woff2"), url("../fonts/QuicksandBold-Regular.woff") format("woff");
+  src: url("../../assets/fonts/QuicksandBold-Regular.woff2") format("woff2"), url("../../assets/fonts/QuicksandBold-Regular.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
