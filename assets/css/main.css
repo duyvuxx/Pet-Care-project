@@ -261,6 +261,7 @@ button {
   color: #ff4500;
 }
 #home_1 main .title h2 {
+  margin: 0;
   font-size: 4rem;
   letter-spacing: -0.2rem;
 }
@@ -825,6 +826,80 @@ button {
 #home_1 main .certificate-list-items .certificate-name > p:first-child {
   font-size: 2.7rem;
 }
+#home_1 main .booking-fluid {
+  margin: 10rem auto 78rem;
+  position: relative;
+}
+#home_1 main .booking-fluid-wrapper {
+  position: absolute;
+  left: 7rem;
+}
 #home_1 main .booking {
-  margin-top: 10rem;
+  position: relative;
+}
+#home_1 main .booking #booking_form {
+  position: absolute;
+  right: 0;
+  max-width: 50%;
+  padding: 5rem 2rem;
+  border-radius: 5rem;
+  text-align: center;
+  background-color: rgb(52, 9, 207);
+  background: url("../imgs/main/main_form_background.png") no-repeat;
+  -webkit-box-shadow: 0px 0px 2.7px rgba(0, 0, 0, 0.034), 0px 0px 6.9px rgba(0, 0, 0, 0.049), 0px 0px 14.2px rgba(0, 0, 0, 0.061), 0px 0px 29.2px rgba(0, 0, 0, 0.076), 0px 0px 80px rgba(0, 0, 0, 0.11);
+          box-shadow: 0px 0px 2.7px rgba(0, 0, 0, 0.034), 0px 0px 6.9px rgba(0, 0, 0, 0.049), 0px 0px 14.2px rgba(0, 0, 0, 0.061), 0px 0px 29.2px rgba(0, 0, 0, 0.076), 0px 0px 80px rgba(0, 0, 0, 0.11);
+}
+#home_1 main .booking #booking_form .booking-infor {
+  margin-bottom: 2rem;
+}
+#home_1 main .booking #booking_form .booking-infor-title {
+  margin: 0;
+}
+#home_1 main .booking #booking_form .booking-form p {
+  margin: 0;
+}
+#home_1 main .booking #booking_form .booking-form-pet select {
+  width: 50%;
+  height: 5rem;
+  padding: 0 2rem;
+  border-radius: 5rem;
+  background-color: wheat;
+}
+#home_1 main .booking #booking_form .booking-form-service {
+  margin: 2.5rem auto;
+}
+#home_1 main .booking #booking_form .booking-form-service select {
+  width: 50%;
+  height: 5rem;
+  padding: 0 2rem;
+  border-radius: 5rem;
+  background-color: wheat;
+}
+#home_1 main .booking #booking_form .booking-form > input {
+  width: 50%;
+  height: 5rem;
+  padding: 0 2rem;
+  border-radius: 5rem;
+  background-color: wheat;
+}
+#home_1 main .booking #booking_form .booking-form .slider {
+  margin: 2.5rem auto;
+}
+#home_1 main .booking #booking_form .booking-form .slider-range {
+  width: 50%;
+}
+#home_1 main .booking #booking_form .booking-form > button {
+  width: 50%;
+  margin-bottom: 2.5rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#home_1 main .booking #booking_form .booking-form > button:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+#home_1 main .booking #booking_form .booking-form > p {
+  padding: 0 10rem;
+  font-size: 1.8rem;
 }

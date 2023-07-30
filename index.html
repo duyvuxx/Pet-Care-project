@@ -551,8 +551,8 @@
 
                 <div class="rate-infor">
                   <img
-                    src="./assets/imgs/main/main_rate_infor.png"
-                    alt="main_rate_infor"
+                    src="./assets/imgs/main/main_rate_infor_3.png"
+                    alt="main_rate_infor_3"
                   />
                 </div>
               </div>
@@ -669,76 +669,79 @@
         </ul>
       </div>
 
-      <div class="container booking">
-        <div class="booking-wrapper">
+      <div class="container-fluid booking-fluid">
+        <div class="booking-fluid-wrapper">
           <img src="./assets/imgs/main/main_form_toy.png" alt="main_form_toy" />
         </div>
 
-        <form id="booking_form">
-          <div class="booking-infor title">
-            <div class="booking-infor-title">
-              <i class="fa-solid fa-dog"></i>
-              <span>Book now</span>
+        <div class="container booking">
+          <form id="booking_form">
+            <div class="booking-infor title">
+              <div class="booking-infor-title">
+                <i class="fa-solid fa-dog"></i>
+                <span>Book now</span>
+              </div>
+
+              <h2>Get free quote</h2>
             </div>
 
-            <h2>Get free quote</h2>
-          </div>
+            <div class="booking-form">
+              <div class="booking-form-pet">
+                <select>
+                  <option value="0">Select your pet</option>
+                  <option value="1">Audi</option>
+                  <option value="2">BMW</option>
+                  <option value="3">Citroen</option>
+                  <option value="4">Ford</option>
+                  <option value="5">Honda</option>
+                  <option value="6">Jaguar</option>
+                  <option value="7">Land Rover</option>
+                  <option value="8">Mercedes</option>
+                  <option value="9">Mini</option>
+                  <option value="10">Nissan</option>
+                  <option value="11">Toyota</option>
+                  <option value="12">Volvo</option>
+                </select>
+              </div>
 
-          <div class="booking-form">
-            <div class="booking-form-pet">
-              <select>
-                <option value="0">Select your pet</option>
-                <option value="1">Audi</option>
-                <option value="2">BMW</option>
-                <option value="3">Citroen</option>
-                <option value="4">Ford</option>
-                <option value="5">Honda</option>
-                <option value="6">Jaguar</option>
-                <option value="7">Land Rover</option>
-                <option value="8">Mercedes</option>
-                <option value="9">Mini</option>
-                <option value="10">Nissan</option>
-                <option value="11">Toyota</option>
-                <option value="12">Volvo</option>
-              </select>
-            </div>
-            <div class="booking-form-service">
-              <select>
-                <option value="0">Choose services</option>
-                <option value="1">Audi</option>
-                <option value="2">BMW</option>
-                <option value="3">Citroen</option>
-                <option value="4">Ford</option>
-                <option value="5">Honda</option>
-                <option value="6">Jaguar</option>
-              </select>
-            </div>
-            <input
-              class="phone"
-              type="tel"
-              placeholder="123-45-678"
-              pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
-              required
-            />
-            <div class="slider">
-              <p>No. of Day</p>
+              <div class="booking-form-service">
+                <select>
+                  <option value="0">Choose services</option>
+                  <option value="1">Audi</option>
+                  <option value="2">BMW</option>
+                  <option value="3">Citroen</option>
+                  <option value="4">Ford</option>
+                  <option value="5">Honda</option>
+                  <option value="6">Jaguar</option>
+                </select>
+              </div>
+
               <input
-                type="range"
-                min="1"
-                max="10"
-                value="3"
-                class="slider-range"
+                class="phone"
+                type="tel"
+                placeholder="123-45-678"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                required
               />
+              <div class="slider">
+                <p>No. of Day</p>
+                <input
+                  type="range"
+                  min="1"
+                  max="10"
+                  value="3"
+                  class="slider-range"
+                />
+              </div>
+
+              <button>Request a Quote</button>
+
+              <p>
+                Never allow pets to travel in the front seat!
+              </p>
             </div>
-
-            <button>Request a Quote</button>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Recusandae illo mollitia facilis consectetur voluptatum neque.
-            </p>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
 
       <div class="container news">
