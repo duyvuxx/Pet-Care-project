@@ -80,6 +80,8 @@
     .title {
       > div {
         margin-bottom: 1rem;
+
+        text-transform: uppercase;
         color: $orange-clr;
       }
 
@@ -301,7 +303,7 @@
             padding: 2rem;
             font-size: 2rem;
             background-repeat: no-repeat;
-            background-image: url('../imgs/main/main_message.png');
+            background-image: url("../imgs/main/main_message.png");
           }
         }
 
@@ -497,27 +499,189 @@
       }
     }
 
-    .talking {
-      margin-top: 45rem;
-    }
+    .king {
+      margin-top: 50rem;
+      padding: 10rem 0 5rem;
 
-    #outer {
-      width: 100%;
-
-      clip-path: path(
-        "M899.89,29V597.92c-1.47-.78-3-1.52-4.41-2.33-50.55-28.08-104.59-44.44-162.42-47.41-46.48-2.38-91.61,4.92-135.26,21a174.26,174.26,0,0,1-63.17,10.45c-35.34-.48-69.7-7.89-104-15.25-47.51-10.17-95-20.46-143.65-23.88-43.28-3.05-86.29-1.25-128.65,8.19-25.69,5.72-51.14,8.66-77.13,3.2-19-4-36.87-10.35-52-22.93-14.76-12.3-22.76-28-20.75-47.35,1-9.8,3.87-19.59,7.11-29,7.6-22,16.52-43.55,23.84-65.63,12.08-36.46,15.7-73.77,8.64-111.81-5.63-30.28-17.56-58.1-32.36-84.95-5.41-9.8-9.1-20.6-13-31.15C1,154.67.83,149.7,0,145V135a21,21,0,0,0,.88-3.33C2.72,111.57,11,94.19,23.57,78.78c21.6-26.55,49.94-43.13,82-53.71,53.39-17.64,107.29-17,160.76-1.29,58.52,17.16,117.5,31.77,178,39.73,52.34,6.88,104.78,9.92,157.38,3.41,29.9-3.71,58.64-11.36,85.63-25.39,14.87-7.74,30.35-14.43,45.93-20.67,28.4-11.37,57.63-19.58,88.57-20,28.89-.41,55,6.88,76.35,27.42A5.79,5.79,0,0,0,899.89,29Z"
-      );
       overflow: hidden;
+
       position: relative;
 
-      video {
-        width: 50%;
-        // height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        // object-fit: cover;
+      background: url("../imgs/main/main_rate_background.png") no-repeat center;
+
+      .talking {
+        &-infor {
+          max-width: 60rem;
+
+          .talking-rate {
+            @include dflex(center, start);
+            gap: 3rem;
+            margin: 3rem auto;
+          }
+        }
+
+        &-infor .talking-rate .rate-wrapper {
+          filter: drop-shadow(0 0 0.75rem #272727);
+        }
+
+        .slide-rate {
+          display: none;
+        }
+
+        .slide-circle {
+          text-align: center;
+        }
+
+        .slide-circle i {
+          margin: auto 3px;
+          display: inline-block;
+
+          border-radius: 50%;
+          transition: all 0.05s ease-out;
+        }
+
+        .slide-circle i:hover {
+          cursor: pointer;
+          outline: 3px solid $orange-clr;
+          color: white;
+        }
+
+        .active {
+          display: block;
+        }
+
+        .active-slide-btn {
+          outline: 3px solid $orange-clr;
+          color: white;
+        }
+
+        &-outer {
+          width: 100rem;
+          height: 100rem;
+
+          clip-path: path(
+            "M899.89,29V597.92c-1.47-.78-3-1.52-4.41-2.33-50.55-28.08-104.59-44.44-162.42-47.41-46.48-2.38-91.61,4.92-135.26,21a174.26,174.26,0,0,1-63.17,10.45c-35.34-.48-69.7-7.89-104-15.25-47.51-10.17-95-20.46-143.65-23.88-43.28-3.05-86.29-1.25-128.65,8.19-25.69,5.72-51.14,8.66-77.13,3.2-19-4-36.87-10.35-52-22.93-14.76-12.3-22.76-28-20.75-47.35,1-9.8,3.87-19.59,7.11-29,7.6-22,16.52-43.55,23.84-65.63,12.08-36.46,15.7-73.77,8.64-111.81-5.63-30.28-17.56-58.1-32.36-84.95-5.41-9.8-9.1-20.6-13-31.15C1,154.67.83,149.7,0,145V135a21,21,0,0,0,.88-3.33C2.72,111.57,11,94.19,23.57,78.78c21.6-26.55,49.94-43.13,82-53.71,53.39-17.64,107.29-17,160.76-1.29,58.52,17.16,117.5,31.77,178,39.73,52.34,6.88,104.78,9.92,157.38,3.41,29.9-3.71,58.64-11.36,85.63-25.39,14.87-7.74,30.35-14.43,45.93-20.67,28.4-11.37,57.63-19.58,88.57-20,28.89-.41,55,6.88,76.35,27.42A5.79,5.79,0,0,0,899.89,29Z"
+          );
+
+          overflow: hidden;
+          position: absolute;
+          right: -10rem;
+          top: 0;
+
+          video {
+            width: 100%;
+            height: 72%;
+
+            object-fit: cover;
+          }
+
+          > button {
+            position: absolute;
+            top: 25%;
+            left: 42%;
+            z-index: 3;
+            background-color: transparent;
+          }
+
+          > button:hover {
+            cursor: pointer;
+          }
+
+          > button i {
+            font-size: 10rem;
+          }
+        }
       }
+    }
+
+    .certificate {
+      margin-top: 10rem;
+
+      &-infor {
+        text-align: center;
+      }
+
+      &-list {
+        @include dflex(center, space-between);
+        margin-top: 5rem;
+
+        &-items {
+          position: relative;
+
+          .certificate-wrapper {
+          }
+
+          .certificate-icon {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            text-align: center;
+
+            i {
+              display: inline-block;
+              padding: 0.7rem;
+
+              background-color: white;
+              border-radius: 50%;
+              font-size: 2.8rem;
+            }
+
+            > i {
+              position: relative;
+              top: 1rem;
+            }
+
+            &:hover .certificate-icon-fb {
+              cursor: pointer;
+              display: block;
+            }
+
+            &:hover > i {
+              cursor: pointer;
+              visibility: hidden;
+            }
+          }
+
+          .certificate-icon-fb {
+            display: none;
+
+            i {
+              display: inline-block;
+              transition: all 0.2s ease-in-out;
+            }
+
+            i:first-child,
+            i:last-child {
+              position: relative;
+              top: -2rem;
+            }
+
+            i:hover {
+              transform: scale(1.1);
+            }
+          }
+
+          .certificate-name {
+            margin-top: 1rem;
+
+            text-align: center;
+
+            p {
+              margin: 0;
+            }
+
+            > p:first-child {
+              font-size: 2.7rem;
+            }
+          }
+        }
+      }
+    }
+
+    .booking {
+      margin-top: 10rem;
     }
   }
 

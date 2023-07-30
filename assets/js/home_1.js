@@ -11,6 +11,8 @@ function start() {
   offImgs();
   nextImg();
   previousImg();
+  slideRate();
+  playVid();
 }
 
 start();
@@ -77,4 +79,39 @@ function offImgs() {
     leftBtn.css("display", "none");
     btnOff.css("display", "none");
   }
+}
+
+const rate = $(".slide-rate");
+
+function changeSlideRate(num) {
+  rate.each(function (idx, val) {
+    if (num === idx) {
+      $(val).addClass("active");
+    } else {
+      $(val).removeClass("active");
+    }
+  });
+}
+
+function slideRate() {
+  const btn = $(".slide-circle i");
+
+  btn.each(function (idx, val) {
+    $(val).click(function () {
+      btn.removeClass("active-slide-btn");
+      $(this).addClass("active-slide-btn");
+
+      changeSlideRate(idx);
+    });
+  });
+}
+
+function playVid() {
+  const video = $(".talking-outer > video")[0];
+  const btnVid = $(".talking-outer > button");
+
+  btnVid.click(function () {
+    video.play();
+    $(this).fadeOut("slow");
+  });
 }
