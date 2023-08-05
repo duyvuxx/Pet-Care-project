@@ -13,6 +13,7 @@ function start() {
   previousImg();
   slideRate();
   playVid();
+  slideDay();
 }
 
 start();
@@ -113,5 +114,15 @@ function playVid() {
   btnVid.click(function () {
     video.play();
     $(this).fadeOut("slow");
+  });
+}
+
+function slideDay() {
+  const slider = $(".slider-range");
+  const output = $(".slider-day");
+  output.text(3);
+
+  slider.on("input", function () {
+    output.text($(this).val());
   });
 }

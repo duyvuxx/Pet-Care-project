@@ -683,7 +683,7 @@
     }
 
     .booking-fluid {
-      margin: 10rem auto 78rem;
+      margin: 10rem auto 69rem;
 
       position: relative;
 
@@ -727,6 +727,8 @@
           }
 
           &-pet {
+            border-radius: 5rem;
+
             select {
               width: 50%;
               height: 5rem;
@@ -764,6 +766,31 @@
 
             &-range {
               width: 50%;
+              -webkit-appearance: none;
+              height: 10px;
+              border-radius: 5px;
+              background: #eeb64f;
+              outline: none;
+              opacity: 0.7;
+              -webkit-transition: 0.2s;
+              transition: opacity 0.2s;
+            }
+
+            &-range:hover {
+              opacity: 1;
+            }
+
+            &-range::-webkit-slider-thumb {
+              appearance: none;
+              width: 14%;
+              height: 4rem;
+              border: 0;
+              background: url("../imgs/main/cat_icon.png") no-repeat;
+              cursor: pointer;
+            }
+
+            &-day {
+              font-size: 2rem;
             }
           }
 
@@ -787,8 +814,79 @@
         }
       }
     }
-  }
 
-  footer {
+    .news-fluid {
+      background: no-repeat url("../imgs/main/main_news_background.png");
+    }
+
+    .news {
+      padding: 10rem 0;
+
+      &-infor {
+        margin-bottom: 6rem;
+      }
+
+      &-list {
+        @include dflex;
+        gap: 2rem;
+
+        &-items {
+          flex: 1;
+
+          border-radius: 2rem;
+          overflow: hidden;
+          box-shadow: 0px 7.5px 8.6px rgba(0, 0, 0, 0.021),
+            0px 25.2px 29px rgba(0, 0, 0, 0.048),
+            0px 113px 130px rgba(0, 0, 0, 0.11);
+
+          .news-wrapper {
+          }
+
+          .news-title {
+            padding: 2rem 3rem;
+
+            .news-tag {
+              @include dflex(center, start);
+              gap: 1rem;
+            }
+
+            .news-tag-infor i {
+              color: $blue-clr;
+            }
+
+            .news-tag-infor span {
+              color: #6e6e6e;
+              font-weight: lighter;
+            }
+
+            .news-text {
+              margin: 2rem auto;
+            }
+
+            .news-text h3 {
+              font-size: 2.8rem;
+            }
+
+            .news-text p {
+              color: gray;
+            }
+
+            > button {
+              padding: 1rem 3rem;
+
+              color: black;
+              background-color: #bebebe;
+              transition: all 0.05s ease-in;
+            }
+
+            > button:hover {
+              color: white;
+              background-color: $orange-clr;
+              transform: scale(1.08);
+            }
+          }
+        }
+      }
+    }
   }
 }
