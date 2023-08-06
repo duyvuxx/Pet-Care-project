@@ -126,3 +126,22 @@ function slideDay() {
     output.text($(this).val());
   });
 }
+
+// Number Increase Count
+setTimeout(() => {
+  function count($this) {
+    var current = parseInt($this.html(), 10);
+    $this.html((current += 2));
+    if (current !== $this.data("count")) {
+      setTimeout(function () {
+        count($this);
+      }, 60);
+    }
+  }
+
+  $(".statistic-infor > p").each(function () {
+    $(this).data("count", parseInt($(this).html(), 10));
+    $(this).html("0");
+    count($(this));
+  });
+}, 4000);

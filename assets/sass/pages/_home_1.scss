@@ -32,13 +32,27 @@
           transform: scale(1.07);
         }
       }
+
+      > img {
+        @include abs(42rem, 60rem, 0);
+
+        animation: myarrow 10s linear infinite alternate both;
+      }
     }
 
     .slider-wrapper {
-      @include abs(-6.5rem, auto, 0);
+      @include abs(-12rem, auto, 0);
 
-      width: 80rem;
+      width: 100rem;
+      height: 100rem;
       z-index: -1;
+
+      overflow: hidden;
+
+      img:nth-child(1) {
+        @include abs(7rem, auto, 0);
+        // z-index: -2;
+      }
 
       img:nth-child(2) {
         @include abs(-7rem, auto, 0);
@@ -46,25 +60,24 @@
       }
 
       img:nth-child(3) {
-        @include abs(25rem, auto, 56rem);
-
+        @include abs(25rem, 20rem, 27rem);
         z-index: -1;
+
+        animation: myimg3 15s linear infinite alternate both;
       }
 
       img:nth-child(4) {
-        @include abs(-25rem, auto, 0);
-
+        @include abs(-10rem, auto, 0);
         z-index: -3;
+
+        animation: myimg4 70s linear infinite alternate both;
       }
 
       img:nth-child(5) {
-        @include abs(65rem, 65rem, 0);
-
+        @include abs(80rem, 75rem, 0);
         z-index: -1;
-      }
 
-      img:nth-child(6) {
-        @include abs(48rem, -50rem, 0);
+        animation: myimg5 30s linear infinite alternate both;
       }
     }
 
@@ -95,7 +108,7 @@
 
     .quality {
       &-infor {
-        margin: 10rem auto 3rem;
+        margin: 20rem auto 3rem;
         text-align: center;
       }
 
@@ -235,13 +248,10 @@
         .statistic-infor {
           p {
             margin: 0;
-          }
-
-          p:first-child {
             font-size: 5rem;
           }
 
-          p:last-child {
+          span {
             color: gray;
             font-size: 2rem;
           }

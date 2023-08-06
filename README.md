@@ -4,7 +4,7 @@
 
 Here's my big project I build showing off full interface of a Pet care's service using SASS, JS with jQuery library.
 
-<img src="./assets/imgs/" alt="screenshot" />
+<img src="./assets/imgs/screenshot.jpg" alt="screenshot" />
 
 
 #### 🐳 Author: [Duy Vu](https://github.com/duyvuxx)

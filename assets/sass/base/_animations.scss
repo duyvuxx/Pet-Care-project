@@ -1,0 +1,98 @@
+@keyframes myarrow {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 100% 50%;
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-7deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-8deg);
+  }
+  90% {
+    transform: rotate(8deg);
+  }
+}
+
+@keyframes myimg3 {
+  0%,
+  100% {
+    transform: translateX(4rem);
+    transform: translateY(-5rem);
+  }
+  10% {
+    transform: translateX(6rem);
+  }
+  20%,
+  40%,
+  60% {
+    transform: translateY(-3rem);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translateX(6rem);
+  }
+  80% {
+    transform: translateY(5rem);
+  }
+  90% {
+    transform: translateX(4rem);
+  }
+}
+
+@keyframes myimg4 {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes myimg5 {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes myphone {
+  0%,
+  100% {
+    transform: scale(1);
+    transform-origin: 50% 50%;
+  }
+  10% {
+    transform: rotate(4deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-7deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: scale(1.1) rotate(7deg);
+  }
+  80% {
+    transform: rotate(-5deg);
+  }
+  90% {
+    transform:  rotate(5deg);
+  }
+}

@@ -53,6 +53,14 @@ header {
       label i {
         font-weight: 500;
         font-size: 2rem;
+
+        transition: all 0.1s ease;
+
+        &:hover {
+          cursor: pointer;
+          color: $orange-clr;
+          transform: scale(1.1);
+        }
       }
 
       .header-phone {
@@ -61,13 +69,15 @@ header {
         padding: 1.5rem 2rem;
 
         border-radius: 5rem;
-        background-color: orangered;
+        background-color: $orange-clr;
 
         position: relative;
         z-index: 1;
 
+        transition: all 0.2s ease-out;
+
         &-icon {
-          color: orangered;
+          color: $orange-clr;
 
           > i {
             position: relative;
@@ -85,13 +95,28 @@ header {
             border-radius: 50%;
             z-index: -1;
 
-            background-color: rgb(255, 255, 255);
+            background-color: #ffffff;
           }
         }
 
-        span {
+        a {
           color: white;
           font-weight: bold;
+          font-style: italic;
+        }
+      }
+
+      &:last-child:hover .header-phone {
+        cursor: pointer;
+        background-color: #3d3d3d;
+      }
+
+      &:last-child:hover .header-phone-icon {
+        color: #3d3d3d;
+
+        > i {
+          animation: myphone 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+            alternate both;
         }
       }
     }
