@@ -14,6 +14,7 @@ function start() {
   slideRate();
   playVid();
   slideDay();
+  rotateIcons();
 }
 
 start();
@@ -124,6 +125,23 @@ function slideDay() {
 
   slider.on("input", function () {
     output.text($(this).val());
+  });
+}
+
+function rotateIcons() {
+  const wrapperIcons = $(".about-infor-expert-items");
+  const icons = $(".about-infor-expert-items > i");
+
+  wrapperIcons.each((idx, val) => {
+    $(val).on("mouseenter", () => {
+      $(icons[idx]).addClass("fa-circle-left").removeClass("fa-circle-right");
+    });
+  });
+
+  wrapperIcons.each((idx, val) => {
+    $(val).on("mouseleave", () => {
+      $(icons[idx]).addClass("fa-circle-right").removeClass("fa-circle-left");
+    });
   });
 }
 

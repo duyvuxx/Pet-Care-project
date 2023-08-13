@@ -39,6 +39,8 @@ header {
     height: 8rem;
 
     @include tablet {
+      margin-right: 25rem;
+
       width: 10rem;
       height: 10rem;
     }

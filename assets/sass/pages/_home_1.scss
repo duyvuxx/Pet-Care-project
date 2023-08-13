@@ -17,7 +17,7 @@
       }
 
       @include mobile {
-        margin: 2rem;
+        margin: 5rem auto 2rem;
         padding: 0 2rem;
       }
 
@@ -90,7 +90,7 @@
 
         @include mobile {
           width: 7rem;
-          @include abs(23rem, 23rem, 0);
+          @include abs(21rem, 21rem, 0);
         }
       }
     }
@@ -206,11 +206,27 @@
       &-infor {
         margin: 20rem auto 3rem;
         text-align: center;
+
+        @include tablet {
+          margin: -5rem auto 3rem;
+        }
+
+        @include mobile {
+          margin: -60rem auto 3rem;
+        }
       }
 
       &-list {
         @include dflex;
         position: relative;
+
+        @include tablet {
+          flex-wrap: wrap;
+        }
+
+        @include mobile {
+          flex-wrap: wrap;
+        }
 
         &-items {
           @include dflex;
@@ -231,15 +247,37 @@
 
           position: relative;
 
+          @include tablet {
+            margin: 8rem auto;
+            padding: 16rem 12rem 2rem;
+
+            border-radius: 2rem;
+          }
+
+          @include mobile {
+            @include dflex(center, end);
+            margin: 8rem auto;
+            padding: 4rem 5rem 2rem;
+            height: 32rem;
+
+            border-radius: 2rem;
+          }
+
           .quality-img {
             position: absolute;
             top: -10rem;
+
+            transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
             img {
               width: 100%;
               height: 100%;
 
               object-fit: cover;
+            }
+
+            @include mobile {
+              width: 18rem;
             }
           }
 
@@ -266,6 +304,10 @@
 
             text-align: center;
             user-select: none;
+
+            @include tablet {
+              max-width: 30rem;
+            }
 
             p:first-child {
               font-size: 2rem;
@@ -299,10 +341,18 @@
             opacity: 0;
 
             transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+            @include mobile {
+              height: 32rem;
+            }
           }
 
           &:hover {
-            background-color: #ecebeb;
+            background-color: #e0e0e0;
+          }
+
+          &:hover .quality-img {
+            transform: translateY(-1rem);
           }
 
           &:hover .quality-sub {
@@ -325,6 +375,14 @@
     .statistic {
       @include dflex;
 
+      @include tablet {
+        gap: 3rem;
+      }
+
+      @include mobile {
+        display: block;
+      }
+
       &-items {
         @include dflex;
         flex: 1;
@@ -332,6 +390,15 @@
         margin: 3rem 0 15rem;
 
         position: relative;
+
+        @include tablet {
+          width: 100%;
+          margin: 3rem auto 10rem;
+        }
+
+        @include mobile {
+          margin: 3rem auto 10rem;
+        }
 
         .statistic-wrapper {
         }
@@ -360,6 +427,12 @@
       flex: 1;
       gap: 5rem;
 
+      @include mobile {
+        padding: 0;
+        flex-direction: column;
+        gap: 38rem;
+      }
+
       &-img {
         position: relative;
 
@@ -373,21 +446,34 @@
           object-fit: cover;
         }
 
-        &-sub {
-          position: absolute;
-          top: 0;
-          left: -30.3rem;
-        }
-
+        &-sub,
         &-wrapper {
-          position: absolute;
-          top: 0;
-          left: -30.3rem;
+          @include abs(0, -30.3rem, auto);
+
+          @include tablet {
+            width: 46rem;
+            @include abs(0, -6rem, auto);
+          }
+
+          @include mobile {
+            @include abs(0, 0, 0);
+          }
         }
       }
 
       &-infor {
         width: 80rem;
+
+        @include tablet {
+          width: 50rem;
+        }
+
+        @include mobile {
+          max-width: 100%;
+          padding: 0 1rem;
+
+          text-align: center;
+        }
 
         &-top {
           &-title {
@@ -412,6 +498,12 @@
             font-size: 2rem;
             background-repeat: no-repeat;
             background-image: url("../imgs/main/main_message.png");
+
+            @include mobile {
+              line-height: 3rem;
+              max-width: 100%;
+              text-align: center;
+            }
           }
         }
 
@@ -419,6 +511,11 @@
           @include dflex(center, space-between);
           gap: 4rem;
           padding: 0;
+
+          @include mobile {
+            text-align: left;
+            display: block;
+          }
 
           &-items {
             flex: 1;
@@ -435,6 +532,10 @@
               margin: 1.5rem auto;
               color: gray;
               font-size: 1.3rem;
+
+              @include mobile {
+                margin: 0.5rem auto 2.5rem;
+              }
             }
           }
         }
