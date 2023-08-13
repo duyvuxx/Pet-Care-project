@@ -72,6 +72,98 @@
           <img src="./assets/imgs/header/header_logo.png" alt="header logo" />
         </div>
 
+        <button
+          class="btn toggle-btn"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasRight"
+          aria-controls="offcanvasRight"
+        >
+          <i class="fa-light fa-square-list"></i>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasRight"
+          aria-labelledby="offcanvasRightLabel"
+        >
+          <div class="offcanvas-header">
+            <div id="offcanvasRightLabel">
+              <img
+                src="./assets/imgs/header/header_logo.png"
+                alt="header logo"
+              />
+            </div>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+
+            <ul class="header-nav-list-bs p-0 m-0 text-decoration-none">
+              <li class="header-nav-list-bs-items">
+                <a href="#" class="text-decoration-none"
+                  ><i class="fa-regular fa-house"></i> Home</a
+                >
+              </li>
+              <li class="header-nav-list-bs-items">
+                <a href="#" class="text-decoration-none">
+                  <i class="fa-regular fa-cat-space"></i> About</a
+                >
+              </li>
+              <li class="header-nav-list-bs-items">
+                <a href="#" class="text-decoration-none"
+                  ><i class="fa-regular fa-table-layout"></i> Pages</a
+                >
+              </li>
+              <li class="header-nav-list-bs-items">
+                <a href="#" class="text-decoration-none"
+                  ><i class="fa-regular fa-newspaper"></i> News</a
+                >
+              </li>
+              <li class="header-nav-list-bs-items">
+                <a href="#" class="text-decoration-none"
+                  ><i class="fa-regular fa-store"></i> Shop</a
+                >
+              </li>
+              <li class="header-nav-list-bs-items">
+                <a href="#" class="text-decoration-none"
+                  ><i class="fa-regular fa-dog-leashed"></i> Content</a
+                >
+              </li>
+            </ul>
+
+            <ul class="header-nav-infor-bs px-5">
+              <li class="header-nav-infor-bs-items">
+                <label><i class="fa-light fa-cart-shopping"></i></label>
+              </li>
+              <li class="header-nav-infor-bs-items">
+                <div class="header-phone">
+                  <div class="header-phone-icon">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <a href="tel:+9288800068">+92 (8880) 0068</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
         <ul class="header-nav-list p-0 m-0 text-decoration-none">
           <li class="header-nav-list-items">
             <a href="#" class="text-decoration-none">Home</a>

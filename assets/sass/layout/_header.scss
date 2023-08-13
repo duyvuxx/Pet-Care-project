@@ -1,16 +1,52 @@
 header {
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.397);
+  border-bottom: 1px solid #80808065;
+
+  @include tablet {
+    padding: 0;
+  }
+}
+
+.header-line {
+  max-width: 100%;
+  height: 4px;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+  }
 }
 
 .header-nav {
   @include dflex;
   gap: 5rem;
 
+  @include tablet {
+    gap: 1rem;
+  }
+
+  @include mobile {
+    @include dflex(center, space-around);
+
+    gap: 2rem;
+  }
+
   &-wrapper {
     margin-right: 10rem;
     width: 8rem;
     height: 8rem;
+
+    @include tablet {
+      width: 10rem;
+      height: 10rem;
+    }
+
+    @include mobile {
+      width: 9rem;
+      height: 9rem;
+    }
 
     img {
       width: 100%;
@@ -23,6 +59,14 @@ header {
   &-list {
     @include dflex;
     gap: 5rem;
+
+    @include tablet {
+      display: none;
+    }
+
+    @include mobile {
+      display: none;
+    }
 
     &-items {
       a {
@@ -43,11 +87,52 @@ header {
     }
   }
 
+  &-list-bs {
+    @include tablet {
+      @include dflex(start, center);
+      flex-direction: column;
+    }
+
+    &-items {
+      width: 100%;
+
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 5rem;
+        line-height: 5rem;
+        padding: 0 2rem;
+        display: inline-block;
+
+        font-weight: 600;
+        letter-spacing: 0.1rem;
+        color: rgb(110, 110, 110);
+
+        transition: all 0.1s ease-out;
+        will-change: transform, font-weight;
+
+        &:hover {
+          color: white;
+          background-color: $orange-clr;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+
   &-infor {
     @include dflex;
     gap: 2rem;
 
     border-left: 1px solid rgba(128, 128, 128, 0.397);
+
+    @include tablet {
+      margin-right: -10rem;
+    }
+
+    @include mobile {
+      display: none;
+    }
 
     &-items {
       label i {
@@ -117,6 +202,143 @@ header {
         > i {
           animation: myphone 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
             alternate both;
+        }
+      }
+    }
+  }
+
+  &-infor-bs {
+    @include dflex;
+    gap: 2rem;
+
+    margin-top: 2rem;
+
+    &-items {
+      label i {
+        font-weight: 500;
+        font-size: 2rem;
+
+        transition: all 0.1s ease;
+
+        &:hover {
+          cursor: pointer;
+          color: $orange-clr;
+          transform: scale(1.1);
+        }
+      }
+
+      .header-phone {
+        @include dflex;
+        gap: 2rem;
+        padding: 1.5rem 2rem;
+
+        border-radius: 5rem;
+        background-color: #3d3d3d;
+
+        position: relative;
+        z-index: 1;
+
+        transition: all 0.2s ease-out;
+
+        &-icon {
+          color: #3d3d3d;
+
+          > i {
+            position: relative;
+          }
+
+          > i::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%;
+            z-index: -1;
+
+            background-color: #ffffff;
+          }
+        }
+
+        a {
+          color: white;
+          font-weight: bold;
+          font-style: italic;
+        }
+      }
+
+      &:last-child:hover .header-phone {
+        cursor: pointer;
+        background-color: $orange-clr;
+      }
+
+      &:last-child:hover .header-phone-icon {
+        color: $orange-clr;
+
+        > i {
+          animation: myphone 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite
+            alternate both;
+        }
+      }
+    }
+  }
+
+  .toggle-btn {
+    display: none;
+
+    i {
+      display: inline-block;
+      padding: 1rem;
+
+      font-size: 3.5rem;
+      color: $orange-clr;
+      border-radius: 1rem;
+      transition: all 0.1s ease;
+
+      &:hover {
+        transform: scale(1.05);
+        opacity: 0.6;
+      }
+    }
+
+    @include tablet {
+      display: block;
+    }
+
+    @include mobile {
+      display: block;
+    }
+  }
+
+  // BUTTON CUSTOM
+  .offcanvas-header {
+    @include dflex(center, space-around);
+    gap: 15rem;
+    padding-top: 2rem;
+  }
+
+  .offcanvas-body {
+    > form {
+      margin-bottom: 1.5rem;
+
+      input {
+        font-size: 2rem;
+      }
+
+      > button {
+        border: none;
+        border-radius: 3rem !important;
+
+        color: white;
+        background-color: $orange-clr;
+
+        transition: all 0.13s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+        &:hover {
+          opacity: 0.8;
         }
       }
     }

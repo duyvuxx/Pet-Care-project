@@ -3,10 +3,23 @@
     @include dflex;
     position: relative;
 
+    @include mobile {
+      display: block;
+    }
+
     .slider-infor {
       margin-left: -40rem;
 
       text-align: left;
+
+      @include tablet {
+        margin-left: 0;
+      }
+
+      @include mobile {
+        margin: 2rem;
+        padding: 0 2rem;
+      }
 
       h1 {
         width: 45rem;
@@ -14,6 +27,23 @@
         font-size: 8rem;
         letter-spacing: -0.5rem;
         line-height: 8rem;
+
+        @include tablet {
+          width: 45rem;
+
+          font-size: 6rem;
+          letter-spacing: -0.5rem;
+          line-height: 6rem;
+        }
+
+        @include mobile {
+          width: 100%;
+
+          text-align: center;
+          font-size: 4rem;
+          letter-spacing: -0.3rem;
+          line-height: 4rem;
+        }
       }
 
       p {
@@ -23,6 +53,16 @@
 
         line-height: 2rem;
         color: gray;
+
+        @include tablet {
+          width: 36rem;
+          margin: 3rem 0;
+        }
+
+        @include mobile {
+          width: 100%;
+          text-align: justify;
+        }
       }
 
       button {
@@ -31,12 +71,27 @@
         &:hover {
           transform: scale(1.07);
         }
+
+        @include mobile {
+          padding: 1rem;
+          font-size: 2rem !important;
+        }
       }
 
       > img {
         @include abs(42rem, 60rem, 0);
 
         animation: myarrow 10s linear infinite alternate both;
+
+        @include tablet {
+          width: 7rem;
+          @include abs(42rem, 33rem, 0);
+        }
+
+        @include mobile {
+          width: 7rem;
+          @include abs(23rem, 23rem, 0);
+        }
       }
     }
 
@@ -49,14 +104,29 @@
 
       overflow: hidden;
 
+      @include tablet {
+        width: 60rem;
+      }
+
+      @include mobile {
+        display: none;
+      }
+
       img:nth-child(1) {
         @include abs(7rem, auto, 0);
-        // z-index: -2;
+
+        @include tablet {
+          @include abs(10rem, 8rem, 0);
+        }
       }
 
       img:nth-child(2) {
         @include abs(-7rem, auto, 0);
         z-index: -2;
+
+        @include tablet {
+          @include abs(0, 12rem, 0);
+        }
       }
 
       img:nth-child(3) {
@@ -64,6 +134,11 @@
         z-index: -1;
 
         animation: myimg3 15s linear infinite alternate both;
+
+        @include tablet {
+          max-width: 10rem;
+          @include abs(20rem, 20rem, 27rem);
+        }
       }
 
       img:nth-child(4) {
@@ -71,6 +146,11 @@
         z-index: -3;
 
         animation: myimg4 70s linear infinite alternate both;
+
+        @include tablet {
+          max-width: 52rem;
+          @include abs(-10rem, 22rem, 0);
+        }
       }
 
       img:nth-child(5) {
@@ -78,6 +158,12 @@
         z-index: -1;
 
         animation: myimg5 30s linear infinite alternate both;
+
+        @include tablet {
+          @include abs(60rem, 40rem, 0);
+
+          width: 8rem;
+        }
       }
     }
 
@@ -86,6 +172,16 @@
       z-index: -1;
       top: -11rem;
       left: -83rem;
+
+      @include tablet {
+        top: -12rem;
+        left: -58rem;
+      }
+
+      @include mobile {
+        top: -50rem;
+        left: 0;
+      }
     }
   }
 
