@@ -1471,7 +1471,14 @@ button {
           flex: 1;
 }
 #home_1 main .about-infor-expert-items i {
+  display: inline-block;
   color: #3985b1;
+  -webkit-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
+}
+#home_1 main .about-infor-expert-items:hover i {
+  -webkit-transform: scale(1.21);
+          transform: scale(1.21);
 }
 #home_1 main .about-infor-expert-items span {
   font-size: 2rem;
@@ -1491,6 +1498,11 @@ button {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
+@media (max-width: 46.1875em) {
+  #home_1 main .about-infor-btn > button {
+    padding: 1rem;
+  }
+}
 #home_1 main .about-infor-btn:hover {
   -webkit-transform: scaleY(1.07);
           transform: scaleY(1.07);
@@ -1500,6 +1512,16 @@ button {
   margin-top: 23rem;
   padding: 0;
   position: relative;
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #home_1 main .gallery {
+    margin-top: 10rem;
+  }
+}
+@media (max-width: 46.1875em) {
+  #home_1 main .gallery {
+    margin-top: 6rem;
+  }
 }
 #home_1 main .gallery-list {
   display: -webkit-box;
@@ -1515,8 +1537,29 @@ button {
   padding: 0;
   overflow: hidden;
 }
+@media (max-width: 46.1875em) {
+  #home_1 main .gallery-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 #home_1 main .gallery-list-items {
   position: relative;
+}
+@media (max-width: 46.1875em) {
+  #home_1 main .gallery-list-items {
+    pointer-events: none;
+  }
+}
+@media (max-width: 46.1875em) {
+  #home_1 main .gallery-list-items:last-child {
+    display: none;
+  }
+}
+@media (max-width: 46.1875em) {
+  #home_1 main .gallery-list-items-wrapper {
+    width: 15rem;
+  }
 }
 #home_1 main .gallery-list-items-layer {
   display: -webkit-box;
@@ -1535,6 +1578,11 @@ button {
   border-radius: 1rem;
   -webkit-transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (max-width: 46.1875em) {
+  #home_1 main .gallery-list-items-layer {
+    display: none;
+  }
 }
 #home_1 main .gallery-list-items-layer > i {
   font-size: 10rem;
@@ -1570,20 +1618,42 @@ button {
   z-index: 2;
 }
 #home_1 main .gallery-bg-wrapper .off {
-  top: 0;
-  right: -10rem;
+  top: 1rem;
+  right: 1rem;
+  background-color: #6e6e6e;
+  padding: 1rem;
+}
+#home_1 main .gallery-bg-wrapper .off:hover {
+  opacity: 0.8;
+  background-color: #a0a0a0;
 }
 #home_1 main .gallery-bg-wrapper .off i {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 #home_1 main .gallery-bg-wrapper .left {
   top: 50%;
-  left: -10rem;
+  left: -7rem;
+  background-color: #6e6e6e;
+  padding: 1rem 2rem;
+}
+#home_1 main .gallery-bg-wrapper .left:hover {
+  background-color: #ff4500;
+}
+#home_1 main .gallery-bg-wrapper .left:active {
+  opacity: 0.8;
 }
 #home_1 main .gallery-bg-wrapper .right {
   top: 50%;
-  right: -10rem;
+  right: -7rem;
+  background-color: #6e6e6e;
+  padding: 1rem 2rem;
+}
+#home_1 main .gallery-bg-wrapper .right:hover {
+  background-color: #ff4500;
+}
+#home_1 main .gallery-bg-wrapper .right:active {
+  opacity: 0.8;
 }
 #home_1 main .gallery-active {
   background-color: rgba(0, 0, 0, 0.6039215686);
@@ -1600,6 +1670,12 @@ button {
   top: 60%;
   z-index: -1;
 }
+@media (max-width: 46.1875em) {
+  #home_1 main .gallery-sub-wrapper {
+    top: 85%;
+    width: 80rem;
+  }
+}
 #home_1 main .gallery-sub > h4 {
   position: absolute;
   top: 120%;
@@ -1607,6 +1683,13 @@ button {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 2.5rem;
+}
+@media (max-width: 46.1875em) {
+  #home_1 main .gallery-sub > h4 {
+    width: 100%;
+    top: 110%;
+    text-align: center;
+  }
 }
 #home_1 main .gallery-sub-list {
   display: -webkit-box;
@@ -1626,8 +1709,29 @@ button {
           transform: translate(-50%, -50%);
   padding: 0;
 }
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #home_1 main .gallery-sub-list {
+    top: 155%;
+  }
+}
+@media (max-width: 46.1875em) {
+  #home_1 main .gallery-sub-list {
+    gap: 1rem;
+    top: 126%;
+  }
+}
 #home_1 main .gallery-sub-list-items .list-sub-wrapper {
   width: 15rem;
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #home_1 main .gallery-sub-list-items .list-sub-wrapper {
+    width: 10rem;
+  }
+}
+@media (max-width: 46.1875em) {
+  #home_1 main .gallery-sub-list-items .list-sub-wrapper {
+    width: 6rem;
+  }
 }
 #home_1 main .gallery-sub-list-items .list-sub-wrapper img {
   -webkit-filter: grayscale(100%);
@@ -1647,10 +1751,40 @@ button {
   padding: 10rem 0 5rem;
   overflow: hidden;
   position: relative;
-  background: url("../imgs/main/main_rate_background.png") no-repeat center;
+  background: url("../imgs/main/main_rate_background.png") no-repeat 0% 24%;
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #home_1 main .king {
+    margin-top: 20rem;
+    padding: 5rem 0 0;
+    height: 115rem;
+  }
+}
+@media (max-width: 46.1875em) {
+  #home_1 main .king {
+    margin-top: 20rem;
+    padding: 5rem 0 0;
+    height: 115rem;
+  }
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #home_1 main .king .talking {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 #home_1 main .king .talking-infor {
   max-width: 60rem;
+}
+#home_1 main .king .talking-infor .rate {
+  text-align: center;
 }
 #home_1 main .king .talking-infor .talking-rate {
   display: -webkit-box;
@@ -1703,6 +1837,22 @@ button {
   position: absolute;
   right: -10rem;
   top: 0;
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #home_1 main .king .talking-outer {
+    top: 55rem;
+    height: 110rem;
+  }
+}
+@media (max-width: 46.1875em) {
+  #home_1 main .king .talking-outer {
+    width: 38rem;
+    top: 59rem;
+    right: 1rem;
+    height: 35rem;
+    -webkit-clip-path: inset(0 0 0 0 round 5% 20% 0 20%);
+            clip-path: inset(0 0 0 0 round 5% 20% 0 20%);
+  }
 }
 #home_1 main .king .talking-outer video {
   width: 100%;

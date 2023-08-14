@@ -521,7 +521,13 @@
             flex: 1;
 
             i {
+              display: inline-block;
               color: #3985b1;
+              transition: all 0.1s ease-out;
+            }
+
+            &:hover i {
+              transform: scale(1.21);
             }
 
             span {
@@ -545,6 +551,12 @@
 
           transition: all 0.2s ease-in-out;
 
+          > button {
+            @include mobile {
+              padding: 1rem;
+            }
+          }
+
           &:hover {
             transform: scaleY(1.07);
             opacity: 0.9;
@@ -558,16 +570,41 @@
       padding: 0;
       position: relative;
 
+      @include tablet {
+        margin-top: 10rem;
+      }
+
+      @include mobile {
+        margin-top: 6rem;
+      }
+
       &-list {
         @include dflex;
         gap: 3rem;
         padding: 0;
         overflow: hidden;
 
+        @include mobile {
+          flex-wrap: wrap;
+        }
+
         &-items {
           position: relative;
 
+          @include mobile {
+            pointer-events: none;
+          }
+
+          &:last-child {
+            @include mobile {
+              display: none;
+            }
+          }
+
           &-wrapper {
+            @include mobile {
+              width: 15rem;
+            }
           }
 
           &-layer {
@@ -581,6 +618,10 @@
             border-radius: 1rem;
 
             transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+
+            @include mobile {
+              display: none;
+            }
 
             > i {
               font-size: 10rem;
@@ -623,23 +664,50 @@
           }
 
           .off {
-            top: 0;
-            right: -10rem;
+            top: 1rem;
+            right: 1rem;
+            background-color: #6e6e6e;
+            padding: 1rem;
+
+            &:hover {
+              opacity: 0.8;
+              background-color: #a0a0a0;
+            }
 
             i {
-              font-size: 2.5rem;
+              font-size: 2rem;
               font-weight: bold;
             }
           }
 
           .left {
             top: 50%;
-            left: -10rem;
+            left: -7rem;
+            background-color: #6e6e6e;
+            padding: 1rem 2rem;
+
+            &:hover {
+              background-color: $orange-clr;
+            }
+
+            &:active {
+              opacity: 0.8;
+            }
           }
 
           .right {
             top: 50%;
-            right: -10rem;
+            right: -7rem;
+            background-color: #6e6e6e;
+            padding: 1rem 2rem;
+
+            &:hover {
+              background-color: $orange-clr;
+            }
+
+            &:active {
+              opacity: 0.8;
+            }
           }
         }
       }
@@ -654,13 +722,6 @@
         height: 700%;
 
         display: none;
-
-        // .off {
-        //   position: relative;
-        //   z-index: 2;
-        //   top: 190rem;
-        //   left: 114rem;
-        // }
       }
 
       &-sub {
@@ -668,6 +729,11 @@
           position: absolute;
           top: 60%;
           z-index: -1;
+
+          @include mobile {
+            top: 85%;
+            width: 80rem;
+          }
         }
 
         > h4 {
@@ -676,6 +742,12 @@
           left: 50%;
           transform: translate(-50%, -50%);
           font-size: 2.5rem;
+
+          @include mobile {
+            width: 100%;
+            top: 110%;
+            text-align: center;
+          }
         }
 
         &-list {
@@ -688,9 +760,27 @@
 
           padding: 0;
 
+          @include tablet {
+            top: 155%;
+          }
+
+          @include mobile {
+            gap: 1rem;
+
+            top: 126%;
+          }
+
           &-items {
             .list-sub-wrapper {
               width: 15rem;
+
+              @include tablet {
+                width: 10rem;
+              }
+
+              @include mobile {
+                width: 6rem;
+              }
             }
 
             .list-sub-wrapper img {
@@ -716,11 +806,33 @@
 
       position: relative;
 
-      background: url("../imgs/main/main_rate_background.png") no-repeat center;
+      background: url("../imgs/main/main_rate_background.png") no-repeat 0% 24%;
+
+      @include tablet {
+        margin-top: 20rem;
+        padding: 5rem 0 0;
+
+        height: 115rem;
+      }
+
+      @include mobile {
+        margin-top: 20rem;
+        padding: 5rem 0 0;
+
+        height: 115rem;
+      }
 
       .talking {
+        @include tablet {
+          @include dflex;
+        }
+
         &-infor {
           max-width: 60rem;
+
+          .rate {
+            text-align: center;
+          }
 
           .talking-rate {
             @include dflex(center, start);
@@ -776,6 +888,20 @@
           position: absolute;
           right: -10rem;
           top: 0;
+
+          @include tablet {
+            top: 55rem;
+            height: 110rem;
+          }
+
+          @include mobile {
+            width: 38rem;
+            top: 59rem;
+            right: 1rem;
+            height: 35rem;
+
+            clip-path: inset(0 0 0 0 round 5% 20% 0 20%);
+          }
 
           video {
             width: 100%;

@@ -56,6 +56,11 @@ function showImgs() {
 
   imgLists.each(function (idx, val) {
     $(val).click(function () {
+      $("html, body").css({
+        overflow: "hidden",
+        height: "50%,",
+      });
+
       bg.css("display", "block");
 
       btnOff.css("display", "block");
@@ -63,6 +68,7 @@ function showImgs() {
       rightBtn.css("display", "block");
       leftBtn.css("display", "block");
 
+      $(".gallery-bg-wrapper").css("width", "32%");
       bgImg.attr("src", `./assets/imgs/main/main_list_img${idx + 1}.png`);
 
       currentValue = idx + 1;
@@ -75,6 +81,10 @@ function offImgs() {
   btnOff.click(offAll);
 
   function offAll() {
+    $("html, body").css({
+      overflow: "auto",
+    });
+
     bg.css("display", "none");
     bgImg.css("display", "none");
     rightBtn.css("display", "none");
