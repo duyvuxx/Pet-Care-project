@@ -732,6 +732,7 @@
 
           @include mobile {
             top: 85%;
+            right: 0;
             width: 80rem;
           }
         }
@@ -816,7 +817,7 @@
       }
 
       @include mobile {
-        margin-top: 20rem;
+        margin: 18rem auto -30rem;
         padding: 5rem 0 0;
 
         height: 115rem;
@@ -924,6 +925,10 @@
 
           > button i {
             font-size: 10rem;
+
+            @include mobile {
+              display: none;
+            }
           }
         }
       }
@@ -931,6 +936,14 @@
 
     .certificate {
       margin-top: 10rem;
+
+      @include tablet {
+        margin-top: 7rem;
+      }
+
+      @include mobile {
+        margin-top: 5rem;
+      }
 
       &-infor {
         text-align: center;
@@ -940,10 +953,37 @@
         @include dflex(center, space-between);
         margin-top: 5rem;
 
+        @include mobile {
+          display: block;
+        }
+
         &-items {
           position: relative;
 
+          @include mobile {
+            @include dflex(center, space-between);
+
+            &:not(:last-child) {
+              margin-bottom: 3rem;
+            }
+
+            &:nth-child(2) {
+              flex-direction: row-reverse;
+
+              .certificate-icon {
+                left: 30%;
+              }
+            }
+          }
+
           .certificate-wrapper {
+            @include tablet {
+              width: 27rem;
+            }
+
+            @include mobile {
+              width: 20rem;
+            }
           }
 
           .certificate-icon {
@@ -954,6 +994,16 @@
 
             text-align: center;
 
+            @include tablet {
+              top: 65%;
+            }
+
+            @include mobile {
+              width: 100%;
+              top: 80%;
+              left: 82%;
+            }
+
             i {
               display: inline-block;
               padding: 0.7rem;
@@ -961,6 +1011,10 @@
               background-color: white;
               border-radius: 50%;
               font-size: 2.8rem;
+
+              @include mobile {
+                display: none;
+              }
             }
 
             > i {
@@ -982,6 +1036,10 @@
           .certificate-icon-fb {
             display: none;
 
+            @include mobile {
+              display: block;
+            }
+
             i {
               display: inline-block;
               transition: all 0.2s ease-in-out;
@@ -991,6 +1049,10 @@
             i:last-child {
               position: relative;
               top: -2rem;
+
+              @include mobile {
+                top: 0;
+              }
             }
 
             i:hover {
@@ -1003,12 +1065,21 @@
 
             text-align: center;
 
+            @include mobile {
+              text-align: right;
+            }
+
             p {
               margin: 0;
             }
 
             > p:first-child {
               font-size: 2.7rem;
+
+              @include mobile {
+                font-weight: bold;
+                font-size: 2rem;
+              }
             }
           }
         }
@@ -1020,9 +1091,28 @@
 
       position: relative;
 
+      @include tablet {
+        margin: 10rem 0 63rem;
+        padding: 0;
+      }
+
+      @include mobile {
+        margin: 10rem 0 50rem;
+        padding: 0;
+      }
+
       &-wrapper {
         position: absolute;
         left: 7rem;
+
+        @include tablet {
+          position: relative;
+        }
+
+        @include mobile {
+          position: relative;
+          left: 3rem;
+        }
       }
     }
 
@@ -1045,6 +1135,20 @@
           0px 0px 6.9px rgba(0, 0, 0, 0.049),
           0px 0px 14.2px rgba(0, 0, 0, 0.061),
           0px 0px 29.2px rgba(0, 0, 0, 0.076), 0px 0px 80px rgba(0, 0, 0, 0.11);
+
+        @include tablet {
+          max-width: 100%;
+          width: 100%;
+          right: 0;
+          top: -10rem;
+        }
+
+        @include mobile {
+          max-width: 100%;
+          width: 100%;
+          right: 0;
+          top: -3rem;
+        }
 
         .booking-infor {
           margin-bottom: 2rem;
@@ -1069,6 +1173,10 @@
 
               border-radius: 5rem;
               background-color: wheat;
+
+              @include mobile {
+                width: 100%;
+              }
             }
           }
 
@@ -1082,6 +1190,10 @@
 
               border-radius: 5rem;
               background-color: wheat;
+
+              @include mobile {
+                width: 100%;
+              }
             }
           }
 
@@ -1092,6 +1204,10 @@
 
             border-radius: 5rem;
             background-color: wheat;
+
+            @include mobile {
+              width: 100%;
+            }
           }
 
           .slider {
@@ -1107,6 +1223,10 @@
               opacity: 0.7;
               -webkit-transition: 0.2s;
               transition: opacity 0.2s;
+
+              @include mobile {
+                width: 100%;
+              }
             }
 
             &-range:hover {
@@ -1132,6 +1252,11 @@
             margin-bottom: 2.5rem;
 
             transition: all 0.2s ease-in-out;
+
+            @include mobile {
+              width: 60%;
+              padding: 1rem;
+            }
           }
 
           > button:hover {
@@ -1143,25 +1268,53 @@
             padding: 0 10rem;
 
             font-size: 1.8rem;
+
+            @include mobile {
+              padding: 0;
+            }
           }
         }
       }
     }
 
     .news-fluid {
-      background: no-repeat url("../imgs/main/main_news_background.png");
+      background: url("../imgs/main/main_news_background.png") no-repeat center;
+
+      @include mobile {
+        background-position: center top;
+      }
     }
 
     .news {
       padding: 10rem 0;
 
+      @include tablet {
+        padding: 6rem 0 8rem;
+      }
+
+      @include mobile {
+        padding: 18rem 0 8rem;
+      }
+
       &-infor {
         margin-bottom: 6rem;
+
+        @include tablet {
+          text-align: center;
+        }
+
+        @include mobile {
+          text-align: center;
+        }
       }
 
       &-list {
         @include dflex;
         gap: 2rem;
+
+        @include mobile {
+          flex-direction: column;
+        }
 
         &-items {
           flex: 1;
@@ -1172,7 +1325,61 @@
             0px 25.2px 29px rgba(0, 0, 0, 0.048),
             0px 113px 130px rgba(0, 0, 0, 0.11);
 
+          position: relative;
+
+          &:hover .news-wrapper img {
+            transform: scale(1.1);
+          }
+
+          &:hover .news-day {
+            background-color: $orange-clr;
+          }
+
+          .news-day {
+            background-color: #3985b1;
+            width: 20rem;
+            height: 15rem;
+            clip-path: polygon(0 0, 14% 16%, 14% 82%, 0% 100%);
+            position: absolute;
+            top: 4rem;
+            left: 0;
+            z-index: 1;
+
+            transition: all 0.23s ease-out;
+
+            @include tablet {
+              top: 3rem;
+            }
+
+            @include mobile {
+              top: 6rem;
+            }
+
+            > span {
+              display: inline-block;
+
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              user-select: none;
+
+              writing-mode: vertical-rl;
+              text-orientation: mixed;
+              color: white;
+            }
+          }
+
           .news-wrapper {
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+
+              object-fit: cover;
+
+              transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
           }
 
           .news-title {
