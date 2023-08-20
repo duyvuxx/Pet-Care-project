@@ -1,5 +1,10 @@
 footer {
-  background: no-repeat url("../imgs/footer/footer_background.png");
+  background: url("../imgs/footer/footer_background.png") no-repeat;
+
+  @include mobile {
+    background-size: cover;
+    background-position: center right;
+  }
 
   .subscribe {
     @include dflex(center, space-between);
@@ -9,13 +14,33 @@ footer {
     background-color: $yellow-clr;
     color: white;
     border-radius: 2rem;
+    overflow:  hidden;
+
+    @include tablet {
+      @include dflex(center, space-around);
+      padding: 2rem 0;
+    }
+
+    @include mobile {
+      display: block;
+      padding: 2rem;
+      max-width: 90%;
+    }
 
     &-logo {
       @include dflex;
       gap: 1.5rem;
 
+      @include mobile {
+        margin-bottom: 1rem;
+      }
+
       > i {
         font-size: 5rem;
+
+        @include mobile {
+          font-size: 4rem;
+        }
       }
 
       > span {
@@ -24,6 +49,9 @@ footer {
     }
 
     &-form {
+      @include mobile {
+        text-align: center;
+      }
       > input {
         padding: 0 1rem;
 
@@ -52,6 +80,10 @@ footer {
       > button {
         background-color: transparent;
 
+        @include mobile {
+          padding: 1rem;
+        }
+
         i {
           font-size: 2.5rem;
         }
@@ -66,14 +98,61 @@ footer {
 
     border-bottom: 1px solid white;
 
+    @include tablet {
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+    }
+
+    @include mobile {
+      display: block;
+    }
+
     &-items {
-      flex: 2;
+      flex: 1;
+
+      &:nth-child(1) {
+        @include tablet {
+          padding-left: 0;
+          text-align: justify;
+        }
+
+        @include mobile {
+          text-align: center;
+          margin-bottom: 3rem;
+        }
+      }
 
       &:nth-child(2) {
         padding-left: 8rem;
+
+        @include tablet {
+          padding-left: 0;
+          text-align: justify;
+
+          grid-area: 2 / 1 / 3/ 2;
+        }
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &:nth-child(3) {
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &:nth-child(4) {
+        @include mobile {
+          padding: 0 1.5rem;
+        }
       }
 
       &-logo {
+        @include mobile {
+          @include dflex;
+        }
       }
 
       > p {
@@ -154,6 +233,9 @@ footer {
       @include dflex(center, start);
       gap: 3rem;
 
+      @include mobile {
+        @include dflex;
+      }
       &-items {
         i {
           display: inline-block;
