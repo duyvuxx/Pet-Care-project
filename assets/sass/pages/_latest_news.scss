@@ -1,0 +1,434 @@
+#latest_news {
+  .background {
+    @include dflex;
+    height: 35rem;
+    background: url("../imgs/latest_news/news_bg.jpg") no-repeat top center;
+
+    @include tablet {
+      height: 25rem;
+      background-position: bottom center;
+    }
+
+    @include mobile {
+      height: 20rem;
+      background-position: bottom center;
+    }
+
+    &-title {
+      text-align: center;
+
+      h1 {
+        font-size: 5rem;
+        color: white;
+
+        @include mobile {
+          font-size: 4rem;
+        }
+      }
+
+      div {
+        color: #bebebe;
+
+        a {
+          display: inline-block;
+          font-family: "Quicksand";
+          font-weight: bold;
+          color: #bebebe;
+
+          transition: color 0.2s ease-in-out;
+
+          &:hover {
+            color: #e9e9e9;
+          }
+        }
+      }
+    }
+  }
+
+  .layout {
+    padding: 10rem 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 2rem;
+
+    @include tablet {
+      padding: 5rem 0;
+    }
+
+    @include mobile {
+      display: block;
+      padding: 5rem 2rem;
+    }
+
+    &-right {
+      @include mobile {
+        display: none;
+      }
+
+      &-form {
+        padding: 2rem 0;
+
+        background-color: $yellow-clr;
+        border-radius: 1.5rem;
+
+        #form_layout {
+          @include dflex(center, space-around);
+
+          input {
+            background-color: $yellow-clr;
+
+            border: none;
+            outline: none;
+          }
+
+          i {
+            display: inline-block;
+            cursor: pointer;
+
+            font-weight: bold;
+            transition: color 0.2s ease;
+
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+
+      &-post {
+        margin: 3rem auto;
+        padding: 4rem 5rem;
+
+        background-color: #faf6f1;
+        border-radius: 2rem;
+
+        > h3 {
+          margin-bottom: 2rem;
+          font-size: 2.5rem;
+        }
+
+        @include tablet {
+          padding: 2rem 3rem;
+        }
+
+        &-list {
+          &-items {
+            @include dflex(center, space-between);
+            gap: 2rem;
+
+            &:not(:last-of-type) {
+              margin-bottom: 2rem;
+            }
+
+            &:hover {
+              cursor: pointer;
+            }
+
+            &:hover .list-infor a {
+              color: $orange-clr;
+            }
+
+            .list-wrapper {
+              width: 7rem;
+              height: 7rem;
+
+              border-radius: 2rem;
+              overflow: hidden;
+
+              img {
+                width: 100%;
+                height: 100%;
+
+                object-fit: cover;
+              }
+            }
+
+            .list-infor {
+              flex: 1;
+
+              i {
+                color: #008ba7;
+              }
+
+              span {
+                color: #6e6e6e;
+              }
+
+              a {
+                color: #333333;
+                font-weight: 550;
+
+                transition: color 0.2s ease;
+              }
+
+              a:hover {
+                color: $orange-clr;
+              }
+            }
+          }
+        }
+      }
+
+      &-categories {
+        margin: 3rem auto;
+        padding: 3rem 5rem;
+
+        background-color: #faf6f1;
+        border-radius: 2rem;
+
+        h3 {
+          margin-bottom: 2rem;
+          font-size: 2.5rem;
+        }
+
+        @include tablet {
+          padding: 2rem 3rem;
+        }
+
+        &-list {
+          &-items {
+            position: relative;
+            z-index: 1;
+            padding: 0 1rem;
+
+            border-radius: 2rem;
+            overflow: hidden;
+
+            &:not(:last-of-type) {
+              margin-bottom: 1rem;
+            }
+
+            &::before {
+              content: "";
+              position: absolute;
+              z-index: -1;
+              top: 50%;
+              left: 0;
+              width: 0;
+              height: 100%;
+
+              transform: translate(-50%, -50%);
+              background-color: white;
+              transition: all 0.4s ease-out;
+            }
+
+            &:hover::before {
+              width: 200%;
+            }
+
+            &::after {
+              font-family: FontAwesome;
+              content: "\f101";
+              font-weight: 900;
+
+              color: $orange-clr;
+              display: inline-block;
+              opacity: 0;
+              transform: translateX(20rem);
+              transition: all 0.3s ease-out 0.05s;
+
+              @include tablet {
+                transform: translateX(8rem);
+              }
+            }
+
+            &:hover::after {
+              opacity: 1;
+              transform: translateX(23rem);
+
+              @include tablet {
+                transform: translateX(11rem);
+              }
+            }
+
+            &:hover a {
+              color: $orange-clr;
+            }
+
+            a {
+              display: inline-block;
+              padding: 1rem 0;
+
+              color: #6e6e6e;
+              font-weight: 550;
+
+              transition: color 0.2s ease;
+            }
+          }
+        }
+      }
+
+      &-tags {
+        margin: 3rem auto;
+        padding: 3rem 5rem;
+
+        background-color: #faf6f1;
+        border-radius: 2rem;
+
+        h3 {
+          margin-bottom: 2rem;
+          font-size: 2.5rem;
+        }
+
+        &-list {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1.5rem;
+
+          &-items {
+            a {
+              display: inline-block;
+              padding: 1rem 2rem;
+
+              color: #6e6e6e;
+              font-weight: 550;
+              font-size: 1.3rem;
+              border-radius: 2rem;
+              background-color: white;
+              transition: all 0.2s ease;
+            }
+
+            a:hover {
+              color: white;
+              background-color: $orange-clr;
+            }
+          }
+        }
+      }
+    }
+
+    .news {
+      &-infor {
+        margin-bottom: 6rem;
+
+        @include tablet {
+          text-align: center;
+        }
+
+        @include mobile {
+          text-align: center;
+        }
+      }
+
+      &-list {
+        &-items {
+          border-radius: 2rem;
+          overflow: hidden;
+          box-shadow: 0px 7.5px 8.6px rgba(0, 0, 0, 0.021),
+            0px 25.2px 29px rgba(0, 0, 0, 0.048),
+            0px 113px 130px rgba(0, 0, 0, 0.11);
+
+          position: relative;
+
+          &:not(:last-of-type) {
+            margin-bottom: 5rem;
+
+            @include tablet {
+              margin-bottom: 3rem;
+            }
+          }
+
+          &:hover .news-wrapper img {
+            transform: scale(1.1);
+          }
+
+          &:hover .news-day {
+            background-color: $orange-clr;
+          }
+
+          .news-day {
+            background-color: #3985b1;
+            width: 20rem;
+            height: 20rem;
+            clip-path: polygon(0 0, 14% 16%, 14% 82%, 0% 100%);
+            position: absolute;
+            top: 15rem;
+            left: 0;
+            z-index: 1;
+
+            transition: all 0.23s ease-out;
+
+            @include tablet {
+              top: 7rem;
+            }
+
+            @include mobile {
+              top: 2rem;
+              height: 15rem;
+            }
+
+            > span {
+              display: inline-block;
+
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              user-select: none;
+
+              writing-mode: vertical-lr;
+              text-orientation: mixed;
+              color: white;
+            }
+          }
+
+          .news-wrapper {
+            overflow: hidden;
+
+            img {
+              width: 100%;
+              height: 100%;
+
+              object-fit: cover;
+
+              transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+            }
+          }
+
+          .news-title {
+            padding: 2rem 3rem;
+
+            .news-tag {
+              @include dflex(center, start);
+              gap: 1rem;
+            }
+
+            .news-tag-infor i {
+              color: $blue-clr;
+            }
+
+            .news-tag-infor span {
+              color: #6e6e6e;
+              font-weight: lighter;
+            }
+
+            .news-text {
+              margin: 2rem auto;
+            }
+
+            .news-text h3 {
+              font-size: 2.8rem;
+            }
+
+            .news-text p {
+              color: gray;
+            }
+
+            > button {
+              padding: 1rem 3rem;
+
+              color: black;
+              background-color: #bebebe;
+              transition: all 0.05s ease-in;
+            }
+
+            > button:hover {
+              color: white;
+              background-color: $orange-clr;
+              transform: scale(1.08);
+            }
+          }
+        }
+      }
+    }
+  }
+}
