@@ -2774,8 +2774,8 @@ button {
   color: #ff4500;
   display: inline-block;
   opacity: 0;
-  -webkit-transform: translateX(20rem);
-          transform: translateX(20rem);
+  -webkit-transform: translateX(17rem);
+          transform: translateX(17rem);
   -webkit-transition: all 0.3s ease-out 0.05s;
   transition: all 0.3s ease-out 0.05s;
 }
@@ -2787,8 +2787,8 @@ button {
 }
 #latest_news .layout-right-categories-list-items:hover::after {
   opacity: 1;
-  -webkit-transform: translateX(23rem);
-          transform: translateX(23rem);
+  -webkit-transform: translateX(20rem);
+          transform: translateX(20rem);
 }
 @media (min-width: 46.25em) and (max-width: 64em) {
   #latest_news .layout-right-categories-list-items:hover::after {

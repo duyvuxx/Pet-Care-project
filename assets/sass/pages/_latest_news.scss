@@ -224,7 +224,7 @@
               color: $orange-clr;
               display: inline-block;
               opacity: 0;
-              transform: translateX(20rem);
+              transform: translateX(17rem);
               transition: all 0.3s ease-out 0.05s;
 
               @include tablet {
@@ -234,7 +234,7 @@
 
             &:hover::after {
               opacity: 1;
-              transform: translateX(23rem);
+              transform: translateX(20rem);
 
               @include tablet {
                 transform: translateX(11rem);
