@@ -80,14 +80,6 @@
       position: relative;
       flex-wrap: wrap;
 
-      @include tablet {
-       
-      }
-
-      @include mobile {
-        
-      }
-
       &-items {
         @include dflex;
         flex-direction: column;

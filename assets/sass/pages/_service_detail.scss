@@ -1,0 +1,47 @@
+#service_detail {
+  .service-detail-bg {
+    @include dflex;
+    height: 35rem;
+    background: url("../imgs/latest_news/news_bg.jpg") no-repeat top center;
+
+    @include tablet {
+      height: 25rem;
+      background-position: bottom center;
+    }
+
+    @include mobile {
+      height: 20rem;
+      background-position: bottom center;
+    }
+
+    &-title {
+      text-align: center;
+
+      h1 {
+        font-size: 5rem;
+        color: white;
+
+        @include mobile {
+          font-size: 4rem;
+        }
+      }
+
+      div {
+        color: #bebebe;
+
+        a {
+          display: inline-block;
+          font-family: "Quicksand";
+          font-weight: bold;
+          color: #bebebe;
+
+          transition: color 0.2s ease-in-out;
+
+          &:hover {
+            color: #e9e9e9;
+          }
+        }
+      }
+    }
+  }
+}

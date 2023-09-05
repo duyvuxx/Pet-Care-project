@@ -2796,6 +2796,58 @@ button {
   opacity: 1;
 }
 
+#service_detail .service-detail-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 35rem;
+  background: url("../imgs/latest_news/news_bg.jpg") no-repeat top center;
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #service_detail .service-detail-bg {
+    height: 25rem;
+    background-position: bottom center;
+  }
+}
+@media (max-width: 46.1875em) {
+  #service_detail .service-detail-bg {
+    height: 20rem;
+    background-position: bottom center;
+  }
+}
+#service_detail .service-detail-bg-title {
+  text-align: center;
+}
+#service_detail .service-detail-bg-title h1 {
+  font-size: 5rem;
+  color: white;
+}
+@media (max-width: 46.1875em) {
+  #service_detail .service-detail-bg-title h1 {
+    font-size: 4rem;
+  }
+}
+#service_detail .service-detail-bg-title div {
+  color: #bebebe;
+}
+#service_detail .service-detail-bg-title div a {
+  display: inline-block;
+  font-family: "Quicksand";
+  font-weight: bold;
+  color: #bebebe;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+#service_detail .service-detail-bg-title div a:hover {
+  color: #e9e9e9;
+}
+
 #latest_news .background {
   display: -webkit-box;
   display: -ms-flexbox;

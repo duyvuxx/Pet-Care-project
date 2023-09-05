@@ -15,6 +15,7 @@ function start() {
   playVid();
   slideDay();
   rotateIcons();
+  serviceDetails();
 }
 
 start();
@@ -173,3 +174,26 @@ setTimeout(() => {
     count($(this));
   });
 }, 4000);
+
+// Service Details
+function serviceDetails() {
+  const btn = $(".quality-list-items > button");
+  // const detailImg = $(".detail-left-wrapper > img");
+
+  btn.each((idx, val) => {
+    $(val).click(function () {
+      window.location.assign("./service_detail.html");
+
+      passData(idx + 1);
+    });
+  });
+
+  function passData(num) {
+    const dataToPass = num;
+    const url = `service_detail.html?data=${dataToPass}`;
+    window.location.href = url;
+  }
+  // console.log($(detailImg[0]).attr("src"));
+
+  // $(detailImg).attr("src", `./assets/imgs/main/main_img_${num}.png`);
+}
