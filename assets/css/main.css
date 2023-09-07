@@ -2851,22 +2851,318 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 5rem;
+  margin: 10rem auto;
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #service_detail .detail {
+    gap: 2rem;
+  }
+}
+@media (max-width: 46.1875em) {
+  #service_detail .detail {
+    display: block;
+    margin: 5rem auto;
+    padding: 0 2rem;
+  }
 }
 #service_detail .detail-left {
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
 }
+#service_detail .detail-left-wrapper {
+  position: relative;
+}
+#service_detail .detail-left-wrapper img:first-child {
+  width: 100%;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5rem;
+}
+#service_detail .detail-left-wrapper img:last-child {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  bottom: -3.5rem;
+  right: 5rem;
+  border-radius: 50%;
+  outline: 5px solid #ff4500;
+  background-color: white;
+}
+@media (max-width: 46.1875em) {
+  #service_detail .detail-left-wrapper img:last-child {
+    width: 6rem;
+    height: 6rem;
+    outline: 3px solid #ff4500;
+  }
+}
+#service_detail .detail-left-title .first-infor {
+  margin: 4rem auto;
+}
+@media (max-width: 46.1875em) {
+  #service_detail .detail-left-title .first-infor {
+    margin: 4rem auto 3rem;
+  }
+}
+#service_detail .detail-left-title .first-infor h2 {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+#service_detail .detail-left-title .first-infor p {
+  color: gray;
+}
+#service_detail .detail-left-title .second-infor h3 {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #ff4500;
+}
+#service_detail .detail-left-title .second-infor p {
+  color: gray;
+}
+#service_detail .detail-left-title-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 5rem;
+  margin: 4rem auto;
+}
+@media (max-width: 46.1875em) {
+  #service_detail .detail-left-title-icon {
+    display: block;
+    margin: 2rem auto;
+  }
+}
+#service_detail .detail-left-title-icon .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+@media (max-width: 46.1875em) {
+  #service_detail .detail-left-title-icon .title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+#service_detail .detail-left-title-icon .title i {
+  color: #7ac043;
+  font-size: 6rem;
+}
+#service_detail .detail-left-title-icon .title p {
+  width: 75%;
+}
+#service_detail .detail-left-title .third-infor {
+  color: gray;
+}
+#service_detail .detail-left-title-benefit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 4rem;
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #service_detail .detail-left-title-benefit {
+    gap: 3rem;
+  }
+}
+@media (max-width: 46.1875em) {
+  #service_detail .detail-left-title-benefit {
+    display: block;
+  }
+}
+#service_detail .detail-left-title-benefit .wrapper {
+  border-radius: 3rem;
+  overflow: hidden;
+}
+#service_detail .detail-left-title-benefit .wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#service_detail .detail-left-title-benefit .infor {
+  width: 50%;
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #service_detail .detail-left-title-benefit .infor {
+    width: 100%;
+  }
+}
+@media (max-width: 46.1875em) {
+  #service_detail .detail-left-title-benefit .infor {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+#service_detail .detail-left-title-benefit .infor h4 {
+  font-size: 3rem;
+}
+#service_detail .detail-left-title-benefit .infor p:first-of-type {
+  color: gray;
+  margin: 2rem auto;
+}
 #service_detail .detail-right {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+@media (max-width: 46.1875em) {
+  #service_detail .detail-right {
+    display: none;
+  }
+}
+#service_detail .detail-right-list-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 4rem;
+  background-color: #faf6f1;
+  border-radius: 1rem;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#service_detail .detail-right-list-items a {
+  display: inline-block;
+  padding: 2rem 3rem;
+  width: 100%;
+  height: 100%;
+  font-weight: 550;
+  color: #3a3a3a;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#service_detail .detail-right-list-items i {
+  -webkit-transform: translateX(-3.5rem);
+          transform: translateX(-3.5rem);
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #service_detail .detail-right-list-items i {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+}
+#service_detail .detail-right-list-items:not(:last-child) {
+  margin-bottom: 1rem;
+}
+#service_detail .detail-right-list-items:hover {
+  cursor: pointer;
+  background-color: #ff4500;
+}
+#service_detail .detail-right-list-items:hover a, #service_detail .detail-right-list-items:hover i {
+  color: white;
+}
+#service_detail .detail-right-contact {
+  position: relative;
+}
+#service_detail .detail-right-contact-wrapper {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+#service_detail .detail-right-contact-wrapper img {
+  width: 100%;
+  height: 45rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#service_detail .detail-right-contact-wrapper .wrapper-layer {
+  position: absolute;
+  inset: 0;
+  background: #008ba7;
+  opacity: 0.8;
+}
+#service_detail .detail-right-contact-infor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  inset: 0;
+  color: white;
+}
+#service_detail .detail-right-contact-infor .phone-wrapper {
+  width: 12rem;
+  height: 12rem;
+}
+#service_detail .detail-right-contact-infor .phone-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#service_detail .detail-right-contact-infor h3 {
+  width: 70%;
+  font-size: 4rem;
+  text-align: center;
+  letter-spacing: -3px;
+}
+#service_detail .detail-right-contact-infor .phone-call {
+  text-align: center;
+}
+#service_detail .detail-right-contact-infor .phone-call p {
+  margin: 0;
+  font-size: 2rem;
+}
+#service_detail .detail-right-contact-infor .phone-call a {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+#service_detail .detail-right-contact-infor .phone-call a:hover {
+  opacity: 0.7;
 }
 
 #latest_news .background {
