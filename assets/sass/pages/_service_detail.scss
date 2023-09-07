@@ -44,4 +44,16 @@
       }
     }
   }
+
+  .detail {
+    @include dflex;
+
+    &-left {
+      flex: 2;
+    }
+
+    &-right {
+      flex: 1;
+    }
+  }
 }

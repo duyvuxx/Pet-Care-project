@@ -178,22 +178,22 @@ setTimeout(() => {
 // Service Details
 function serviceDetails() {
   const btn = $(".quality-list-items > button");
-  // const detailImg = $(".detail-left-wrapper > img");
+  const title = $("p");
 
   btn.each((idx, val) => {
     $(val).click(function () {
       window.location.assign("./service_detail.html");
 
-      passData(idx + 1);
+      const title = $(val).parent().children(3).children("p").first().text();
+
+      passDataImg(title, idx + 1);
     });
   });
 
-  function passData(num) {
-    const dataToPass = num;
-    const url = `service_detail.html?data=${dataToPass}`;
+  function passDataImg(title, num) {
+    const dataTitle = title;
+    const dataImg = num;
+    const url = `service_detail.html?dataImg=${dataImg}&dataTitle=${dataTitle}`;
     window.location.href = url;
   }
-  // console.log($(detailImg[0]).attr("src"));
-
-  // $(detailImg).attr("src", `./assets/imgs/main/main_img_${num}.png`);
 }
