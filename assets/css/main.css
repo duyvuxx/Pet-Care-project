@@ -2796,6 +2796,195 @@ button {
   opacity: 1;
 }
 
+#about_us .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 35rem;
+  background: url("../imgs/latest_news/news_bg.jpg") no-repeat top center;
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #about_us .about {
+    height: 25rem;
+    background-position: bottom center;
+  }
+}
+@media (max-width: 46.1875em) {
+  #about_us .about {
+    height: 20rem;
+    background-position: bottom center;
+  }
+}
+#about_us .about-title {
+  text-align: center;
+}
+#about_us .about-title h1 {
+  font-size: 5rem;
+  color: white;
+}
+@media (max-width: 46.1875em) {
+  #about_us .about-title h1 {
+    font-size: 4rem;
+  }
+}
+#about_us .about-title div {
+  color: #bebebe;
+}
+#about_us .about-title div a {
+  display: inline-block;
+  font-family: "Quicksand";
+  font-weight: bold;
+  color: #bebebe;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+#about_us .about-title div a:hover {
+  color: #e9e9e9;
+}
+#about_us .title > div {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #ff4500;
+}
+#about_us .title h2 {
+  margin: 0;
+  font-size: 4rem;
+  letter-spacing: -0.2rem;
+}
+#about_us .center-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#about_us .statistic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #about_us .statistic {
+    gap: 3rem;
+  }
+}
+@media (max-width: 46.1875em) {
+  #about_us .statistic {
+    display: block;
+  }
+}
+#about_us .statistic-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  gap: 3rem;
+  margin: 3rem 0 15rem;
+  position: relative;
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #about_us .statistic-items {
+    width: 100%;
+    margin: 3rem auto 10rem;
+  }
+}
+@media (max-width: 46.1875em) {
+  #about_us .statistic-items {
+    margin: 3rem auto 10rem;
+  }
+}
+#about_us .statistic-items .statistic-pawn {
+  position: absolute;
+  z-index: -1;
+}
+#about_us .statistic-items .statistic-infor p {
+  margin: 0;
+  font-size: 5rem;
+}
+#about_us .statistic-items .statistic-infor span {
+  color: gray;
+  font-size: 2rem;
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #about_us .saying-left .talking {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+#about_us .saying-left .talking-infor {
+  max-width: 60rem;
+}
+#about_us .saying-left .talking-infor .rate {
+  text-align: center;
+}
+#about_us .saying-left .talking-infor .talking-rate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 3rem;
+  margin: 3rem auto;
+}
+#about_us .saying-left .talking-infor .talking-rate .rate-wrapper {
+  -webkit-filter: drop-shadow(0 0 0.75rem #272727);
+          filter: drop-shadow(0 0 0.75rem #272727);
+}
+#about_us .saying-left .talking .slide-rate {
+  display: none;
+}
+#about_us .saying-left .talking .slide-circle {
+  text-align: center;
+}
+#about_us .saying-left .talking .slide-circle i {
+  margin: auto 3px;
+  display: inline-block;
+  border-radius: 50%;
+  -webkit-transition: all 0.05s ease-out;
+  transition: all 0.05s ease-out;
+}
+#about_us .saying-left .talking .slide-circle i:hover {
+  cursor: pointer;
+  outline: 3px solid #ff4500;
+  color: white;
+}
+#about_us .saying-left .talking .active {
+  display: block;
+}
+#about_us .saying-left .talking .active-slide-btn {
+  outline: 3px solid #ff4500;
+  color: white;
+}
 #service_detail .service-detail-bg {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3359,6 +3548,15 @@ button {
   padding: 0 1rem;
   border-radius: 2rem;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 #latest_news .layout-right-categories-list-items:not(:last-of-type) {
   margin-bottom: 1rem;
@@ -3387,27 +3585,30 @@ button {
   color: #ff4500;
   display: inline-block;
   opacity: 0;
-  -webkit-transform: translateX(17rem);
-          transform: translateX(17rem);
+  -webkit-transform: translateX(-4rem);
+          transform: translateX(-4rem);
   -webkit-transition: all 0.3s ease-out 0.05s;
   transition: all 0.3s ease-out 0.05s;
 }
 @media (min-width: 46.25em) and (max-width: 64em) {
   #latest_news .layout-right-categories-list-items::after {
-    -webkit-transform: translateX(8rem);
-            transform: translateX(8rem);
+    -webkit-transform: translateX(-3rem);
+            transform: translateX(-3rem);
   }
 }
 #latest_news .layout-right-categories-list-items:hover::after {
   opacity: 1;
-  -webkit-transform: translateX(20rem);
-          transform: translateX(20rem);
+  -webkit-transform: translateX(-2rem);
+          transform: translateX(-2rem);
 }
 @media (min-width: 46.25em) and (max-width: 64em) {
   #latest_news .layout-right-categories-list-items:hover::after {
-    -webkit-transform: translateX(11rem);
-            transform: translateX(11rem);
+    -webkit-transform: translateX(-1rem);
+            transform: translateX(-1rem);
   }
+}
+#latest_news .layout-right-categories-list-items:hover {
+  cursor: pointer;
 }
 #latest_news .layout-right-categories-list-items:hover a {
   color: #ff4500;
@@ -3415,6 +3616,7 @@ button {
 #latest_news .layout-right-categories-list-items a {
   display: inline-block;
   padding: 1rem 0;
+  width: 100%;
   color: #6e6e6e;
   font-weight: 550;
   -webkit-transition: color 0.2s ease;

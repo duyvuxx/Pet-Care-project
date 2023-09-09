@@ -1,0 +1,193 @@
+#about_us {
+  .about {
+    @include dflex;
+    height: 35rem;
+    background: url("../imgs/latest_news/news_bg.jpg") no-repeat top center;
+
+    @include tablet {
+      height: 25rem;
+      background-position: bottom center;
+    }
+
+    @include mobile {
+      height: 20rem;
+      background-position: bottom center;
+    }
+
+    &-title {
+      text-align: center;
+
+      h1 {
+        font-size: 5rem;
+        color: white;
+
+        @include mobile {
+          font-size: 4rem;
+        }
+      }
+
+      div {
+        color: #bebebe;
+
+        a {
+          display: inline-block;
+          font-family: "Quicksand";
+          font-weight: bold;
+          color: #bebebe;
+
+          transition: color 0.2s ease-in-out;
+
+          &:hover {
+            color: #e9e9e9;
+          }
+        }
+      }
+    }
+  }
+
+  .title {
+    > div {
+      margin-bottom: 1rem;
+
+      text-transform: uppercase;
+      color: $orange-clr;
+    }
+
+    h2 {
+      margin: 0;
+
+      font-size: 4rem;
+      letter-spacing: -0.2rem;
+    }
+  }
+
+  .center {
+    &-infor {
+      &-btn {
+      }
+    }
+
+    &-wrapper {
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+    }
+  }
+
+  .statistic {
+    @include dflex;
+
+    @include tablet {
+      gap: 3rem;
+    }
+
+    @include mobile {
+      display: block;
+    }
+
+    &-items {
+      @include dflex;
+      flex: 1;
+      gap: 3rem;
+      margin: 3rem 0 15rem;
+
+      position: relative;
+
+      @include tablet {
+        width: 100%;
+        margin: 3rem auto 10rem;
+      }
+
+      @include mobile {
+        margin: 3rem auto 10rem;
+      }
+
+      .statistic-wrapper {
+      }
+
+      .statistic-pawn {
+        position: absolute;
+        z-index: -1;
+      }
+
+      .statistic-infor {
+        p {
+          margin: 0;
+          font-size: 5rem;
+        }
+
+        span {
+          color: gray;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .saying {
+    &-left {
+      .talking {
+        @include tablet {
+          @include dflex;
+        }
+
+        &-infor {
+          max-width: 60rem;
+
+          .rate {
+            text-align: center;
+          }
+
+          .talking-rate {
+            @include dflex(center, start);
+            gap: 3rem;
+            margin: 3rem auto;
+          }
+        }
+
+        &-infor .talking-rate .rate-wrapper {
+          filter: drop-shadow(0 0 0.75rem #272727);
+        }
+
+        .slide-rate {
+          display: none;
+        }
+
+        .slide-circle {
+          text-align: center;
+        }
+
+        .slide-circle i {
+          margin: auto 3px;
+          display: inline-block;
+
+          border-radius: 50%;
+          transition: all 0.05s ease-out;
+        }
+
+        .slide-circle i:hover {
+          cursor: pointer;
+          outline: 3px solid $orange-clr;
+          color: white;
+        }
+
+        .active {
+          display: block;
+        }
+
+        .active-slide-btn {
+          outline: 3px solid $orange-clr;
+          color: white;
+        }
+      }
+    }
+
+    &-right {
+    }
+  }
+
+  
+}

@@ -94,6 +94,7 @@ function offImgs() {
   }
 }
 
+// Slide Rate
 const rate = $(".slide-rate");
 
 function changeSlideRate(num) {

@@ -194,6 +194,8 @@
             border-radius: 2rem;
             overflow: hidden;
 
+            @include dflex;
+
             &:not(:last-of-type) {
               margin-bottom: 1rem;
             }
@@ -224,21 +226,25 @@
               color: $orange-clr;
               display: inline-block;
               opacity: 0;
-              transform: translateX(17rem);
+              transform: translateX(-4rem);
               transition: all 0.3s ease-out 0.05s;
 
               @include tablet {
-                transform: translateX(8rem);
+                transform: translateX(-3rem);
               }
             }
 
             &:hover::after {
               opacity: 1;
-              transform: translateX(20rem);
+              transform: translateX(-2rem);
 
               @include tablet {
-                transform: translateX(11rem);
+                transform: translateX(-1rem);
               }
+            }
+
+            &:hover {
+              cursor: pointer;
             }
 
             &:hover a {
@@ -248,6 +254,7 @@
             a {
               display: inline-block;
               padding: 1rem 0;
+              width: 100%;
 
               color: #6e6e6e;
               font-weight: 550;
