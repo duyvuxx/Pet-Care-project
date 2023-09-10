@@ -48,3 +48,8 @@ function slideRate() {
     });
   });
 }
+
+// Expand one by one
+jQuery(".good-infor-list-items > a").click(function () {
+  jQuery(".collapse").collapse("hide");
+});
