@@ -53,3 +53,11 @@ function slideRate() {
 jQuery(".good-infor-list-items > a").click(function () {
   jQuery(".collapse").collapse("hide");
 });
+
+// Owl Carousel
+$(".owl-carousel").owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: true,
+  item: 1,
+});

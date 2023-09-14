@@ -67,12 +67,38 @@
     @include dflex(center, space-between);
     margin: 10rem auto;
 
+    @include tablet {
+      @include dflex(start, space-between);
+      gap: 3rem;
+    }
+
+    @include mobile {
+      display: block;
+      margin: 5rem auto;
+    }
+
     &-infor {
       width: 50%;
 
+      @include mobile {
+        width: 100%;
+      }
+
       .title {
+        @include mobile {
+          text-align: center;
+        }
+
         h2 {
           font-size: 5rem;
+
+          @include tablet {
+            font-size: 4rem;
+          }
+
+          @include mobile {
+            font-size: 3.5rem;
+          }
         }
       }
 
@@ -88,6 +114,10 @@
 
       &-btn {
         transition: all 0.2s ease-in-out;
+
+        @include mobile {
+          display: none;
+        }
 
         &:hover {
           background-color: #d13902;
@@ -137,9 +167,6 @@
         margin: 3rem auto 10rem;
       }
 
-      .statistic-wrapper {
-      }
-
       .statistic-pawn {
         position: absolute;
         z-index: -1;
@@ -161,11 +188,27 @@
 
   .saying {
     @include dflex;
-
     background: url("../imgs/about/saying_bg.jpg") no-repeat center right;
+
+    @include tablet {
+      flex-direction: column;
+      background-position: bottom center;
+    }
+
+    @include mobile {
+      display: block;
+    }
 
     &-left {
       flex: 1;
+
+      @include tablet {
+        padding: 3rem;
+      }
+
+      @include mobile {
+        padding: 3rem;
+      }
 
       .talking {
         @include dflex;
@@ -239,10 +282,18 @@
       @include dflex;
       flex-wrap: wrap;
 
+      @include tablet {
+        @include dflex(center, space-between);
+      }
+
       &-items {
         max-width: 50%;
         overflow: hidden;
         position: relative;
+
+        @include tablet {
+          width: 100%;
+        }
 
         img {
           width: 100%;
@@ -279,6 +330,11 @@
 
           transition: all 0.27s ease-out;
 
+          @include mobile {
+            padding: 1.5rem;
+            font-size: 2rem;
+          }
+
           &:hover {
             cursor: pointer;
             opacity: 1;
@@ -310,16 +366,38 @@
 
     margin: 10rem auto;
 
+    @include tablet {
+      display: block;
+      margin: 5rem auto;
+    }
+
+    @include mobile {
+      display: block;
+      margin: 5rem auto;
+    }
+
     &-pic {
       flex: 1;
 
       .title {
+        @include tablet {
+          text-align: center;
+        }
+
+        @include mobile {
+          text-align: center;
+        }
+
         > div {
           margin: 0;
         }
 
         h2 {
           font-size: 5rem;
+
+          @include mobile {
+            font-size: 4rem;
+          }
         }
       }
 
@@ -327,10 +405,21 @@
         @include dflex(center, space-between);
         margin: 4rem auto;
 
+        @include tablet {
+          @include dflex;
+        }
+
+        @include mobile {
+          @include dflex;
+        }
+
         &-wrapper {
           flex: 1;
-
           overflow: hidden;
+
+          @include tablet {
+            @include dflex;
+          }
 
           img {
             border-radius: 50%;
@@ -357,6 +446,13 @@
             span {
               color: gray;
             }
+
+            i,
+            span {
+              @include tablet {
+                font-size: 2.5rem;
+              }
+            }
           }
         }
       }
@@ -382,10 +478,25 @@
     &-infor {
       flex: 1;
 
+      @include tablet {
+        margin-top: 5rem;
+      }
+
+      @include mobile {
+        margin-top: 4rem;
+      }
       &-list {
         &-items {
+          @include tablet {
+            font-size: 5rem !important;
+          }
+
           &:not(:last-child) {
             margin-bottom: 1rem;
+
+            @include tablet {
+              margin-bottom: 5px;
+            }
           }
 
           a {

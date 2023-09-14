@@ -98,6 +98,10 @@
 
         position: relative;
 
+        &:hover {
+          cursor: pointer;
+        }
+
         @include tablet {
           margin: 8rem auto;
           padding: 16rem 12rem 2rem;

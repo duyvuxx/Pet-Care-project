@@ -14,4 +14,13 @@ function handleDetailService(val, num) {
 
 handleDetailService(dataValueTitle, dataValueImg);
 
+// Switch to Homepage
+function homePage() {
+  const wrapper = $(".header-nav-wrapper");
 
+  wrapper.click(function () {
+    location.href = "./index.html";
+  });
+}
+
+homePage()

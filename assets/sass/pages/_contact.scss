@@ -187,6 +187,9 @@
         width: 33rem;
 
         &-items {
+          @include dflex(center, start);
+          gap: 1rem;
+
           &:not(:last-of-type) {
             margin-bottom: 1.7rem;
           }
@@ -196,6 +199,11 @@
 
             font-size: 2.3rem;
             color: $orange-clr;
+          }
+
+          > a {
+            color: #212529;
+            font-family: 'quicksand';
           }
         }
       }

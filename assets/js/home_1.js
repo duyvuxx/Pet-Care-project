@@ -7,6 +7,8 @@ const leftBtn = $(".left");
 let currentValue = 0;
 
 function start() {
+  homePage();
+  readMoreService();
   showImgs();
   offImgs();
   nextImg();
@@ -20,6 +22,24 @@ function start() {
 
 start();
 
+// Switch to Homepage
+function homePage() {
+  const wrapper = $(".header-nav-wrapper");
+
+  wrapper.click(function () {
+    location.href = "./index.html";
+  });
+}
+
+function readMoreService() {
+  const post = $(".quality-list .quality-list-items");
+
+  post.each((idx, val) => {
+    val.click(function () {});
+  });
+}
+
+// Change next Img
 function nextImg() {
   rightBtn.click(function () {
     if (currentValue === 5) {
@@ -55,6 +75,8 @@ function previousImg() {
 function showImgs() {
   const imgLists = $(".gallery-list-items");
 
+  const windowHeight = $(window).scrollTop();
+
   imgLists.each(function (idx, val) {
     $(val).click(function () {
       $("html, body").css({
@@ -70,12 +92,65 @@ function showImgs() {
       leftBtn.css("display", "block");
 
       $(".gallery-bg-wrapper").css("width", "32%");
+
+
       bgImg.attr("src", `./assets/imgs/main/main_list_img${idx + 1}.png`);
 
       currentValue = idx + 1;
     });
   });
 }
+
+// function showImgs() {
+//   const imgLists = $(".gallery-list-items");
+//   const bg = $(".gallery-bg-wrapper");
+//   const bgImg = $(".gallery-bg");
+//   const btnOff = $(".close-btn");
+//   const rightBtn = $(".right-btn");
+//   const leftBtn = $(".left-btn");
+//   const body = $("body");
+//   const html = $("html");
+
+//   imgLists.each(function (idx, val) {
+//     $(val).click(function () {
+//       body.addClass("hidden");
+//       html.addClass("hidden");
+
+//       bg.css("display", "block");
+//       btnOff.css("display", "block");
+//       bgImg.css("display", "block");
+//       rightBtn.css("display", "block");
+//       leftBtn.css("display", "block");
+
+//       $(".gallery-bg-wrapper").css("width", "32%");
+
+//       // Lấy kích thước cửa sổ
+//       const windowWidth = $(window).width();
+//       const windowHeight = $(window).height();
+
+//       // Lấy kích thước ảnh
+//       const imgWidth = bgImg.width();
+//       const imgHeight = bgImg.height();
+
+//       // Tính toán vị trí canh chỉnh ảnh ở trung tâm
+//       const imgLeft = (windowWidth - imgWidth) / 2;
+//       const imgTop = (windowHeight - imgHeight) / 2;
+
+//       bgImg.css({ left: imgLeft + "px", top: imgTop + "px" });
+
+//       // Thay đổi nguồn ảnh
+//       bgImg.attr("src", `./assets/imgs/main/main_list_img${idx + 1}.png`);
+
+//       currentValue = idx + 1;
+//     });
+//   });
+
+//   btnOff.click(function () {
+//     body.removeClass("hidden");
+//     html.removeClass("hidden");
+//     bg.css("display", "none");
+//   });
+// }
 
 function offImgs() {
   bg.click(offAll);
@@ -178,8 +253,14 @@ setTimeout(() => {
 
 // Service Details
 function serviceDetails() {
+  const listItem = $(".quality-list-items");
   const btn = $(".quality-list-items > button");
-  const title = $("p");
+
+  listItem.each((idx, val) => {
+    $(val).click(function () {
+      $(this).find(btn).trigger("click");
+    });
+  });
 
   btn.each((idx, val) => {
     $(val).click(function () {

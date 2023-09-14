@@ -65,32 +65,37 @@
         }
       }
 
-      button {
-        transition: all 0.2s ease-in-out;
+      div {
+        position: relative;
 
-        &:hover {
-          transform: scale(1.07);
+        button {
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            transform: scale(1.07);
+          }
+
+          @include mobile {
+            padding: 1rem;
+            font-size: 2rem !important;
+          }
         }
 
-        @include mobile {
-          padding: 1rem;
-          font-size: 2rem !important;
-        }
-      }
+        img {
+          position: absolute;
+          top: -20%;
+          left: 52%;
+          transform: translate(-50%, -50%);
 
-      > img {
-        @include abs(42rem, 60rem, 0);
+          animation: myarrow 10s linear infinite alternate both;
 
-        animation: myarrow 10s linear infinite alternate both;
+          @include tablet {
+            width: 7rem;
+          }
 
-        @include tablet {
-          width: 7rem;
-          @include abs(42rem, 33rem, 0);
-        }
-
-        @include mobile {
-          width: 7rem;
-          @include abs(21rem, 21rem, 0);
+          @include mobile {
+            width: 6rem;
+          }
         }
       }
     }
@@ -246,6 +251,10 @@
           transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
           position: relative;
+
+          &:hover {
+            cursor: pointer;
+          }
 
           @include tablet {
             margin: 8rem auto;
@@ -986,6 +995,23 @@
         &-items {
           position: relative;
 
+          transition: transform 0.15s ease-out;
+
+          &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+          }
+
+          &:hover .certificate-icon-fb {
+            cursor: pointer;
+            display: block;
+          }
+
+          &:hover .certificate-icon > i {
+            cursor: pointer;
+            visibility: hidden;
+          }
+
           @include mobile {
             @include dflex(center, space-between);
 
@@ -1014,7 +1040,7 @@
 
           .certificate-icon {
             position: absolute;
-            top: 70%;
+            top: 69%;
             left: 50%;
             transform: translate(-50%, -50%);
 
@@ -1048,15 +1074,15 @@
               top: 1rem;
             }
 
-            &:hover .certificate-icon-fb {
-              cursor: pointer;
-              display: block;
-            }
+            // &:hover .certificate-icon-fb {
+            //   cursor: pointer;
+            //   display: block;
+            // }
 
-            &:hover > i {
-              cursor: pointer;
-              visibility: hidden;
-            }
+            // &:hover > i {
+            //   cursor: pointer;
+            //   visibility: hidden;
+            // }
           }
 
           .certificate-icon-fb {
