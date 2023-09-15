@@ -2964,6 +2964,9 @@ button {
   -o-object-fit: cover;
      object-fit: cover;
 }
+#about_us .owl-wrapper {
+  margin: 0 auto;
+}
 #about_us .statistic {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3094,6 +3097,11 @@ button {
 #about_us .saying-left .talking-infor {
   max-width: 60rem;
 }
+@media (max-width: 46.1875em) {
+  #about_us .saying-left .talking-infor {
+    width: 100%;
+  }
+}
 #about_us .saying-left .talking-infor .rate {
   text-align: center;
   color: white;
@@ -3117,34 +3125,15 @@ button {
   color: white;
   font-size: 2rem;
 }
+#about_us .saying-left .talking-infor .talking-text:hover {
+  cursor: ew-resize;
+}
+#about_us .saying-left .talking-infor .talking-text p {
+  margin: 0;
+}
 #about_us .saying-left .talking-infor .talking-rate .rate-wrapper {
   -webkit-filter: drop-shadow(0 0 0.75rem #272727);
           filter: drop-shadow(0 0 0.75rem #272727);
-}
-#about_us .saying-left .talking .slide-rate {
-  display: none;
-}
-#about_us .saying-left .talking .slide-circle {
-  text-align: center;
-}
-#about_us .saying-left .talking .slide-circle i {
-  margin: auto 3px;
-  display: inline-block;
-  border-radius: 50%;
-  -webkit-transition: all 0.05s ease-out;
-  transition: all 0.05s ease-out;
-}
-#about_us .saying-left .talking .slide-circle i:hover {
-  cursor: pointer;
-  outline: 3px solid #ff4500;
-  color: white;
-}
-#about_us .saying-left .talking .active {
-  display: block;
-}
-#about_us .saying-left .talking .active-slide-btn {
-  outline: 3px solid #ff4500;
-  color: white;
 }
 #about_us .saying-right {
   -webkit-box-flex: 1;
@@ -3439,6 +3428,49 @@ button {
 #about_us .good-infor-list-items div {
   font-weight: normal;
   color: gray;
+}
+#about_us .owl-carousel .owl-nav button {
+  position: absolute;
+  top: 50%;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#about_us .owl-carousel .owl-nav.owl-prev {
+  left: 0;
+}
+#about_us .owl-carousel .owl-nav.owl-next {
+  right: 0;
+}
+#about_us .owl-carousel .owl-dots {
+  text-align: center;
+}
+#about_us .owl-carousel button.owl-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  background: white;
+  margin: 0 3px;
+}
+#about_us .owl-carousel button.owl-dot.active {
+  background-color: #ff4500;
+  outline: 2px solid white;
+}
+#about_us .owl-carousel button.owl-dot:focus {
+  outline: 2px solid white;
+}
+#about_us .owl-carousel .owl-nav button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.38) !important;
+}
+#about_us .owl-carousel .owl-nav button:focus {
+  outline: none;
 }
 
 #service_detail .service-detail-bg {

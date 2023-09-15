@@ -56,8 +56,11 @@ jQuery(".good-infor-list-items > a").click(function () {
 
 // Owl Carousel
 $(".owl-carousel").owlCarousel({
+  items: 1,
   loop: true,
-  margin: 10,
-  nav: true,
-  item: 1,
+  margin: 50,
+  autoplay: true,
+  autoplayTimeout: 2500,
+  autoplayHoverPause: true,
+  dots: true
 });
