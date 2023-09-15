@@ -2964,9 +2964,6 @@ button {
   -o-object-fit: cover;
      object-fit: cover;
 }
-#about_us .owl-wrapper {
-  margin: 0 auto;
-}
 #about_us .statistic {
   display: -webkit-box;
   display: -ms-flexbox;

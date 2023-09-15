@@ -1,8 +1,18 @@
 function start() {
+  homePage();
   slideRate();
 }
 
 start();
+
+// Switch to Homepage
+function homePage() {
+  const wrapper = $(".header-nav-wrapper");
+
+  wrapper.click(function () {
+    location.href = "./index.html";
+  });
+}
 
 // Number Increase Count
 setTimeout(() => {
@@ -62,5 +72,5 @@ $(".owl-carousel").owlCarousel({
   autoplay: true,
   autoplayTimeout: 2500,
   autoplayHoverPause: true,
-  dots: true
+  dots: true,
 });
