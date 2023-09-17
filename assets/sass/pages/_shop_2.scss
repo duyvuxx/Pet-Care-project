@@ -1,4 +1,4 @@
-#shop {
+#shop_2 {
   .shop-bg {
     @include dflex;
     height: 35rem;
@@ -219,11 +219,31 @@
       flex: 3.5;
 
       &-list {
-        @include dflex;
+        @include dflex(center, start);
         flex-wrap: wrap;
         gap: 3rem;
 
+        @include mobile {
+          @include dflex;
+        }
+
         &-items {
+          &:first-of-type {
+            display: none;
+          }
+
+          @include tablet {
+            &:first-of-type {
+              display: block;
+            }
+          }
+
+          @include mobile {
+            &:first-of-type {
+              display: none;
+            }
+          }
+
           &:hover .wrapper {
             cursor: pointer;
             transform: translateY(-2rem);
@@ -355,12 +375,19 @@
         margin-top: 2rem;
 
         .pagination {
+          .page-item.disabled > .page-link {
+            border: none;
+            outline: 1px solid transparent;
+            background-color: $orange-clr;
+            color: white;
+          }
+
           .page-link {
             margin: auto 5px;
             padding: 1rem 1.5rem;
 
             color: #6e6e6e;
-            background-color: white;
+            // background-color: white;
             border: none;
             border-radius: 1rem;
             font-weight: bold;
