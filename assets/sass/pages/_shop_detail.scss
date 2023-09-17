@@ -1,0 +1,161 @@
+#shop_detail {
+  .shop-bg {
+    @include dflex;
+    height: 35rem;
+    background: url("../imgs/latest_news/news_bg.jpg") no-repeat top center;
+
+    @include tablet {
+      height: 25rem;
+      background-position: bottom center;
+    }
+
+    @include mobile {
+      height: 20rem;
+      background-position: bottom center;
+    }
+
+    &-title {
+      text-align: center;
+
+      h1 {
+        font-size: 5rem;
+        color: white;
+
+        @include mobile {
+          font-size: 4rem;
+        }
+      }
+
+      div {
+        color: #bebebe;
+
+        a {
+          display: inline-block;
+          font-family: "Quicksand";
+          font-weight: bold;
+          color: #bebebe;
+
+          transition: color 0.2s ease-in-out;
+
+          &:hover {
+            color: #e9e9e9;
+          }
+        }
+      }
+    }
+  }
+
+  .layout {
+    @include dflex(start, center);
+    margin: 7rem auto;
+    gap: 5rem;
+
+    &-left {
+      flex: 1;
+
+      &-wrapper {
+        padding: 10rem 15rem;
+
+        border-radius: 3rem;
+        background-color: #fbf8f2;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+
+          object-fit: cover;
+        }
+      }
+    }
+
+    &-right {
+      flex: 1;
+
+      &-title {
+        h1 {
+          font-size: 4.5rem;
+        }
+
+        p {
+          color: $orange-clr;
+          font-size: 3rem;
+        }
+      }
+
+      > p {
+        margin: 2rem auto 0;
+
+        color: $gray-clr;
+        font-size: 2rem;
+      }
+
+      &-quantity {
+        @include dflex(center, start);
+        gap: 2rem;
+        margin: 2.5rem auto;
+
+        p {
+          margin: 0;
+          font-size: 2rem;
+        }
+
+        &-infor {
+          @include dflex;
+          color: gray;
+
+          outline: 1px solid lightgray;
+          overflow: hidden;
+          border-radius: 1rem;
+
+          > p {
+            padding: 5px 4rem;
+          }
+
+          .quantity-icon {
+            @include dflex;
+            flex-direction: column;
+
+            i {
+              display: inline-block;
+              padding: 5px 1.2rem;
+              outline: 1px solid lightgray;
+
+              transition: all 0.2s ease-out;
+              
+              &:hover {
+                cursor: pointer;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+
+      &-btn {
+        @include dflex(center, start);
+        gap: 1.5rem;
+
+        button {
+          padding: 1.5rem 3rem;
+
+          transition: all 0.2s ease;
+        }
+
+        button:first-child {
+          &:hover {
+            background-color: #b83100;
+          }
+        }
+
+        button:last-child {
+          background-color: orange;
+
+          &:hover {
+            background-color: #db8f01;
+          }
+        }
+      }
+    }
+  }
+}

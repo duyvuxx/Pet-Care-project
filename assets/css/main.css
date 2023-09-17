@@ -5112,6 +5112,192 @@ button {
   color: white;
 }
 
+#shop_detail .shop-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 35rem;
+  background: url("../imgs/latest_news/news_bg.jpg") no-repeat top center;
+}
+@media (min-width: 46.25em) and (max-width: 64em) {
+  #shop_detail .shop-bg {
+    height: 25rem;
+    background-position: bottom center;
+  }
+}
+@media (max-width: 46.1875em) {
+  #shop_detail .shop-bg {
+    height: 20rem;
+    background-position: bottom center;
+  }
+}
+#shop_detail .shop-bg-title {
+  text-align: center;
+}
+#shop_detail .shop-bg-title h1 {
+  font-size: 5rem;
+  color: white;
+}
+@media (max-width: 46.1875em) {
+  #shop_detail .shop-bg-title h1 {
+    font-size: 4rem;
+  }
+}
+#shop_detail .shop-bg-title div {
+  color: #bebebe;
+}
+#shop_detail .shop-bg-title div a {
+  display: inline-block;
+  font-family: "Quicksand";
+  font-weight: bold;
+  color: #bebebe;
+  -webkit-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+#shop_detail .shop-bg-title div a:hover {
+  color: #e9e9e9;
+}
+#shop_detail .layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 7rem auto;
+  gap: 5rem;
+}
+#shop_detail .layout-left {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+#shop_detail .layout-left-wrapper {
+  padding: 10rem 15rem;
+  border-radius: 3rem;
+  background-color: #fbf8f2;
+  overflow: hidden;
+}
+#shop_detail .layout-left-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#shop_detail .layout-right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+#shop_detail .layout-right-title h1 {
+  font-size: 4.5rem;
+}
+#shop_detail .layout-right-title p {
+  color: #ff4500;
+  font-size: 3rem;
+}
+#shop_detail .layout-right > p {
+  margin: 2rem auto 0;
+  color: #6e6e6e;
+  font-size: 2rem;
+}
+#shop_detail .layout-right-quantity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 2rem;
+  margin: 2.5rem auto;
+}
+#shop_detail .layout-right-quantity p {
+  margin: 0;
+  font-size: 2rem;
+}
+#shop_detail .layout-right-quantity-infor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: gray;
+  outline: 1px solid lightgray;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+#shop_detail .layout-right-quantity-infor > p {
+  padding: 5px 4rem;
+}
+#shop_detail .layout-right-quantity-infor .quantity-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+#shop_detail .layout-right-quantity-infor .quantity-icon i {
+  display: inline-block;
+  padding: 5px 1.2rem;
+  outline: 1px solid lightgray;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+#shop_detail .layout-right-quantity-infor .quantity-icon i:hover {
+  cursor: pointer;
+  color: black;
+}
+#shop_detail .layout-right-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 1.5rem;
+}
+#shop_detail .layout-right-btn button {
+  padding: 1.5rem 3rem;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+#shop_detail .layout-right-btn button:first-child:hover {
+  background-color: #b83100;
+}
+#shop_detail .layout-right-btn button:last-child {
+  background-color: orange;
+}
+#shop_detail .layout-right-btn button:last-child:hover {
+  background-color: #db8f01;
+}
+
 #contact .background {
   display: -webkit-box;
   display: -ms-flexbox;
