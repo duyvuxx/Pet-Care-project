@@ -25,7 +25,7 @@ function heartLogin() {
 }
 
 function changePage() {
-  const currentPage = location.pathname.slice(6, -5);
+  const currentPage = location.pathname.slice(-6, -5);
   const totalPages = 2;
 
   const pageItemPrevious = $(".page-item:first");
