@@ -1,7 +1,7 @@
 function start() {
   homePage();
   heartLogin();
-  pagination();
+  changePage();
 }
 
 start();
@@ -24,7 +24,7 @@ function heartLogin() {
   });
 }
 
-function pagination() {
+function changePage() {
   const currentPage = window.location.pathname.slice(6, -5);
   const totalPages = 2;
 
