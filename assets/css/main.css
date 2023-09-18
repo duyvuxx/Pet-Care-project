@@ -5239,8 +5239,8 @@ button {
           justify-content: center;
   color: gray;
   outline: 1px solid lightgray;
-  overflow: hidden;
   border-radius: 1rem;
+  overflow: hidden;
 }
 #shop_detail .layout-right-quantity-infor > p {
   padding: 5px 4rem;
