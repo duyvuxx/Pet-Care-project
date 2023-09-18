@@ -25,7 +25,7 @@ function heartLogin() {
 }
 
 function changePage() {
-  const currentPage = window.location.pathname.slice(6, -5);
+  const currentPage = location.pathname.slice(6, -5);
   const totalPages = 2;
 
   const pageItemPrevious = $(".page-item:first");
@@ -40,7 +40,7 @@ function changePage() {
     pageItemPrevious.css("display", "block");
     pageItemPrevious.click(function () {
       if (+currentPage > 1) {
-        window.location.href = `./shop_${+currentPage - 1}.html`;
+        location.href = `./shop_${+currentPage - 1}.html`;
       }
     });
   }
@@ -51,7 +51,7 @@ function changePage() {
     pageItemNext.css("display", "block");
     pageItemNext.click(function () {
       if (+currentPage < totalPages) {
-        window.location.href = `./shop_${+currentPage + 1}.html`;
+        location.href = `./shop_${+currentPage + 1}.html`;
       }
     });
   }
