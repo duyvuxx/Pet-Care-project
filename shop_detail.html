@@ -252,12 +252,12 @@
 
       <div class="container description">
         <div class="description-title">
-          <a href="">Description</a>
-          <a href="">Reviews(1)</a>
+          <p class="active">Description</p>
+          <p>Reviews (1)</p>
         </div>
 
         <div class="description-infor">
-          <div class="desc">
+          <div class="desc enable">
             <p>
               Lorem ipsum dolor sit amet sectetur adipiscin elit cras feuiat
               antesed ces condimentum viverra duis autue nim convallis id diam
@@ -280,62 +280,68 @@
             </p>
           </div>
 
-          <div class="review">
-            <div class="review-wrapper">
-              <img src="" alt="" />
+          <div class="re-layout">
+            <div class="review">
+              <div class="review-wrapper">
+                <img src="./assets/imgs/shop/minh_anh.jpg" alt="vo_yeu" />
+              </div>
+              <div class="review-infor">
+                <div>
+                  <h3>Minh Anh</h3>
+                  <p>October 23, 2002</p>
+                </div>
+                <p>
+                  I can't say enough about this exceptional pet care service.
+                  The staff is incredibly dedicated, providing my pet with the
+                  utmost love and attention. Their expertise and genuine passion
+                  for animals shine through, making me feel confident and
+                  relieved knowing my pet is in their capable hands. Truly
+                  outstanding!
+                </p>
+              </div>
             </div>
-            <div class="review-infor">
-              <h3>Kevin Martin</h3>
-              <p>May 18, 2022</p>
-              <p>
-                Aliquam et facilisis arcuut olestie augue. Suspendisse sodales
-                tortor nunc quis auctor ligula posuere cursus duis aute irure
-                dolor in reprehenderit in voluptate velit esse cill doloreeu
-                fugiat nulla pariatur excepteur sint. Vivaus sed delly molestie
-                sapien. Aliquam et facilisis arcuut molestie augue.
-              </p>
+
+            <hr />
+
+            <div class="add">
+              <h3>Add a review</h3>
+              <label
+                ><input type="checkbox" /> Save my name, email, and website in
+                this browser for the next time I comment.</label
+              >
+              <form id="review_form" class="review-form">
+                <div class="review-form-name">
+                  <input type="text" placeholder="Name" />
+                  <input type="email" placeholder="Email" />
+                </div>
+
+                <div class="review-form-rate">
+                  <div>
+                    <p>Your rating</p>
+                    <div class="star-rating">
+                      <input type="radio" name="rating" id="rating-5" />
+                      <label for="rating-5"></label>
+                      <input type="radio" name="rating" id="rating-4" />
+                      <label for="rating-4"></label>
+                      <input type="radio" name="rating" id="rating-3" />
+                      <label for="rating-3"></label>
+                      <input type="radio" name="rating" id="rating-2" />
+                      <label for="rating-2"></label>
+                      <input type="radio" name="rating" id="rating-1" />
+                      <label for="rating-1"></label>
+                    </div>
+                  </div>
+                  <textarea
+                    cols="25"
+                    rows="10"
+                    placeholder="Your review..."
+                  ></textarea>
+                </div>
+
+                <button>Submit Review</button>
+              </form>
             </div>
           </div>
-        </div>
-
-        <hr />
-
-        <div class="add">
-          <h2>Add a review</h2>
-          <label
-            ><input type="checkbox" /> Save my name, email, and website in this
-            browser for the next time I comment.</label
-          >
-          <form id="review_form" class="review-form">
-            <div class="review-form-name">
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
-            </div>
-
-            <div class="review-form-rate">
-              <div>
-                <p>Your rating</p>
-                <div class="star-rating">
-                  <input type="radio" name="rating" id="rating-5" />
-                  <label for="rating-5"></label>
-                  <input type="radio" name="rating" id="rating-4" />
-                  <label for="rating-4"></label>
-                  <input type="radio" name="rating" id="rating-3" />
-                  <label for="rating-3"></label>
-                  <input type="radio" name="rating" id="rating-2" />
-                  <label for="rating-2"></label>
-                  <input type="radio" name="rating" id="rating-1" />
-                  <label for="rating-1"></label>
-                </div>
-              </div>
-              <textarea
-                cols="30"
-                rows="10"
-                placeholder="Your review..."
-              ></textarea>
-            </div>
-            <button>Submit Review</button>
-          </form>
         </div>
       </div>
     </main>

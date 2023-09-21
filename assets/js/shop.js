@@ -2,6 +2,7 @@ function start() {
   homePage();
   heartLogin();
   changePage();
+  shopDetails();
 }
 
 start();
@@ -54,5 +55,38 @@ function changePage() {
         location.href = `./shop_${+currentPage + 1}.html`;
       }
     });
+  }
+}
+
+// Shop detail
+function shopDetails() {
+  const listItem = $(".layout-right-list-items");
+
+  listItem.each((idx, val) => {
+    $(val).click(function () {
+      window.location.assign("./shop_detail.html");
+
+      // get title
+      const title = $(val).children(".text").children("h3").text();
+
+      // get img name
+      const imgAttr = $(val).children(".wrapper").children("img").attr("src");
+      const imgArr = imgAttr.split("/");
+      const imgData = imgArr[imgArr.length - 1].split(".")[0];
+
+      // get price
+      const price = $(val).children(".text").children("p").text();
+
+      passShopData(title, imgData, price);
+    });
+  });
+
+  function passShopData(title, img, price) {
+    const dataTitle = title;
+    const dataImg = img;
+    const dataPrice = price;
+
+    const url = `shop_detail.html?dataImg=${dataImg}&dataTitle=${dataTitle}&dataPrice=${dataPrice}`;
+    window.location.href = url;
   }
 }

@@ -75,8 +75,6 @@ function previousImg() {
 function showImgs() {
   const imgLists = $(".gallery-list-items");
 
-  const windowHeight = $(window).scrollTop();
-
   imgLists.each(function (idx, val) {
     $(val).click(function () {
       $("html, body").css({
@@ -93,64 +91,12 @@ function showImgs() {
 
       $(".gallery-bg-wrapper").css("width", "32%");
 
-
       bgImg.attr("src", `./assets/imgs/main/main_list_img${idx + 1}.png`);
 
       currentValue = idx + 1;
     });
   });
 }
-
-// function showImgs() {
-//   const imgLists = $(".gallery-list-items");
-//   const bg = $(".gallery-bg-wrapper");
-//   const bgImg = $(".gallery-bg");
-//   const btnOff = $(".close-btn");
-//   const rightBtn = $(".right-btn");
-//   const leftBtn = $(".left-btn");
-//   const body = $("body");
-//   const html = $("html");
-
-//   imgLists.each(function (idx, val) {
-//     $(val).click(function () {
-//       body.addClass("hidden");
-//       html.addClass("hidden");
-
-//       bg.css("display", "block");
-//       btnOff.css("display", "block");
-//       bgImg.css("display", "block");
-//       rightBtn.css("display", "block");
-//       leftBtn.css("display", "block");
-
-//       $(".gallery-bg-wrapper").css("width", "32%");
-
-//       // Lấy kích thước cửa sổ
-//       const windowWidth = $(window).width();
-//       const windowHeight = $(window).height();
-
-//       // Lấy kích thước ảnh
-//       const imgWidth = bgImg.width();
-//       const imgHeight = bgImg.height();
-
-//       // Tính toán vị trí canh chỉnh ảnh ở trung tâm
-//       const imgLeft = (windowWidth - imgWidth) / 2;
-//       const imgTop = (windowHeight - imgHeight) / 2;
-
-//       bgImg.css({ left: imgLeft + "px", top: imgTop + "px" });
-
-//       // Thay đổi nguồn ảnh
-//       bgImg.attr("src", `./assets/imgs/main/main_list_img${idx + 1}.png`);
-
-//       currentValue = idx + 1;
-//     });
-//   });
-
-//   btnOff.click(function () {
-//     body.removeClass("hidden");
-//     html.removeClass("hidden");
-//     bg.css("display", "none");
-//   });
-// }
 
 function offImgs() {
   bg.click(offAll);

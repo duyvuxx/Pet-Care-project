@@ -41,6 +41,10 @@
             color: #e9e9e9;
           }
         }
+
+        span {
+          text-transform: uppercase;
+        }
       }
     }
   }
@@ -49,6 +53,10 @@
     @include dflex(start, center);
     margin: 7rem auto;
     gap: 5rem;
+
+    @include mobile {
+      display: block;
+    }
 
     &-left {
       flex: 1;
@@ -59,6 +67,14 @@
         border-radius: 3rem;
         background-color: #fbf8f2;
         overflow: hidden;
+
+        @include tablet {
+          padding: 15rem 10rem;
+        }
+
+        @include mobile {
+          padding: 8rem 7rem;
+        }
 
         img {
           width: 100%;
@@ -73,6 +89,10 @@
       flex: 1;
 
       &-title {
+        @include mobile {
+          text-align: center;
+        }
+
         h1 {
           font-size: 4.5rem;
         }
@@ -88,12 +108,20 @@
 
         color: $gray-clr;
         font-size: 2rem;
+
+        @include mobile {
+          text-align: center;
+        }
       }
 
       &-quantity {
         @include dflex(center, start);
         gap: 2rem;
         margin: 2.5rem auto;
+
+        @include mobile {
+          @include dflex;
+        }
 
         p {
           margin: 0;
@@ -122,7 +150,7 @@
               outline: 1px solid lightgray;
 
               transition: all 0.2s ease-out;
-              
+
               &:hover {
                 cursor: pointer;
                 color: black;
@@ -136,10 +164,18 @@
         @include dflex(center, start);
         gap: 1.5rem;
 
+        @include mobile {
+          @include dflex;
+        }
+
         button {
           padding: 1.5rem 3rem;
 
           transition: all 0.2s ease;
+
+          @include mobile {
+            padding: 2rem;
+          }
         }
 
         button:first-child {
@@ -153,6 +189,235 @@
 
           &:hover {
             background-color: #db8f01;
+          }
+        }
+      }
+    }
+  }
+
+  .description {
+    &-title {
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+        content: "";
+        background-color: lightgray;
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+
+      p {
+        display: inline-block;
+        margin: 0;
+        padding: 2rem;
+
+        color: black;
+        font-size: 2rem;
+        font-family: "Quicksand";
+        font-weight: bold;
+        border-radius: 2rem 2rem 0 0;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      .active {
+        background-color: #fbf8f2;
+      }
+    }
+
+    &-infor {
+      margin: 3rem auto;
+
+      .desc {
+        display: none;
+        color: $gray-clr;
+        font-weight: lighter;
+        font-size: 1.8rem;
+      }
+
+      .re-layout {
+        display: none;
+      }
+
+      .review {
+        @include dflex;
+        gap: 3rem;
+
+        &-wrapper {
+          border-radius: 50%;
+          overflow: hidden;
+
+          @include mobile {
+            flex: 1;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+          }
+        }
+
+        &-infor {
+          @include mobile {
+            flex: 1;
+            text-align: end;
+          }
+
+          p {
+            margin: 0;
+          }
+
+          div {
+            margin-bottom: 2rem;
+
+            h3 {
+              font-size: 2.5rem;
+              font-weight: bold;
+            }
+
+            p {
+              color: $orange-clr;
+            }
+          }
+
+          > p {
+            color: $gray-clr;
+          }
+        }
+      }
+
+      .enable {
+        display: block;
+      }
+    }
+
+    .add {
+      margin: 3rem auto;
+
+      h3 {
+        margin: 0;
+        font-size: 3rem;
+      }
+
+      > label {
+        margin: 2rem auto 0;
+      }
+
+      .review-form {
+        &-name {
+          @include dflex;
+          gap: 2rem;
+          margin: 3rem auto;
+
+          @include mobile {
+            display: block;
+          }
+
+          input {
+            flex: 1;
+            width: 100%;
+            padding: 1.5rem 2.5rem;
+
+            border-radius: 2rem;
+            border: none;
+            outline: none;
+            background-color: #fbf8f2;
+
+            @include mobile {
+              &:not(:last-of-type) {
+                margin-bottom: 1.5rem;
+              }
+            }
+          }
+        }
+
+        &-rate {
+          margin: 3rem auto;
+
+          @include mobile {
+            margin: 1.5rem auto;
+          }
+
+          > div {
+            @include dflex;
+            @include mobile {
+              display: block;
+            }
+            > p {
+              margin: 0;
+              width: 10rem;
+
+              @include mobile {
+                text-align: center;
+                width: 100%;
+              }
+            }
+
+            .star-rating {
+              @include dflex(center, start);
+              flex-direction: row-reverse;
+
+              width: 100%;
+              overflow: hidden;
+              position: relative;
+
+              @include mobile {
+                @include dflex;
+              }
+
+              > input {
+                display: none;
+              }
+
+              > label {
+                margin-top: auto;
+                cursor: pointer;
+                width: 40px;
+                height: 40px;
+                background: url("../imgs/shop/star_no.png") no-repeat no-repeat
+                  center / 60%;
+                transition: 0.5s;
+              }
+
+              > input:not(:checked) ~ label:hover,
+              > input:not(:checked) ~ label:hover ~ label {
+                background: url("../imgs/shop/star_active.png") no-repeat center /
+                  60%;
+              }
+
+              > input:checked ~ label,
+              > input:checked ~ label ~ label {
+                background: url("../imgs/shop/star_active.png") no-repeat center /
+                  60%;
+              }
+            }
+          }
+
+          textarea {
+            width: 100%;
+            padding: 1.5rem 2.5rem;
+
+            resize: none;
+            border-radius: 2rem;
+            background-color: #fbf8f2;
+            border: none;
+            outline: none;
+          }
+        }
+
+        > button {
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            background-color: #b83100 !important;
           }
         }
       }
