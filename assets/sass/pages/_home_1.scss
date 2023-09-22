@@ -409,9 +409,6 @@
           margin: 3rem auto 10rem;
         }
 
-        .statistic-wrapper {
-        }
-
         .statistic-pawn {
           position: absolute;
           z-index: -1;
@@ -482,11 +479,6 @@
           padding: 0 1rem;
 
           text-align: center;
-        }
-
-        &-top {
-          &-title {
-          }
         }
 
         &-text {
@@ -1276,7 +1268,7 @@
 
             &-range {
               width: 50%;
-              -webkit-appearance: none;
+              appearance: none;
               height: 10px;
               border-radius: 5px;
               background: #eeb64f;
@@ -1360,7 +1352,6 @@
       &-infor {
         margin-bottom: 3rem;
 
-       
         @include tablet {
           text-align: center;
         }
@@ -1369,8 +1360,6 @@
           text-align: center;
         }
       }
-
-     
 
       &-list {
         @include dflex;

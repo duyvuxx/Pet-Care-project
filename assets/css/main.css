@@ -2342,6 +2342,8 @@ button {
 #home_1 main .booking #booking_form .booking-form .slider-range {
   width: 50%;
   -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   height: 10px;
   border-radius: 5px;
   background: #eeb64f;
