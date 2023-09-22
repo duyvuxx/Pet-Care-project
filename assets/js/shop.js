@@ -3,6 +3,7 @@ function start() {
   heartLogin();
   changePage();
   shopDetails();
+  filterItems();
 }
 
 start();
@@ -89,4 +90,17 @@ function shopDetails() {
     const url = `shop_detail.html?dataImg=${dataImg}&dataTitle=${dataTitle}&dataPrice=${dataPrice}`;
     window.location.href = url;
   }
+}
+
+function filterItems() {
+  const slider = $(".layout-left-filter-bar input");
+  const newValues = $(".layout-left-filter-price")
+    .children("p")
+    .children("span");
+
+  // change slider number
+  slider.on("input", function () {
+    let price = $(this).val();
+    newValues.text(+price);
+  });
 }

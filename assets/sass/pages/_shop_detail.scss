@@ -137,10 +137,13 @@
           overflow: hidden;
 
           > p {
+            flex: 2 !important;
             padding: 5px 4rem;
           }
 
           .quantity-icon {
+            flex: 1 !important;
+
             @include dflex;
             flex-direction: column;
 

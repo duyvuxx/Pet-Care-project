@@ -109,14 +109,18 @@
           @include dflex(center, space-around);
 
           > p {
+            flex: 2;
             margin: 0;
 
-            font-size: 2rem;
-
             color: #6e6e6e;
+
+            span {
+              font-size: 2rem;
+            }
           }
 
           > button {
+            flex: 1;
             padding: 5px 2rem;
             font-size: 1.8rem !important;
           }
